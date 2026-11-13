@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","on-surface-variant":"#40484c","on-secondary-container":"#00714e","error":"#ba1a1a","tertiary-container":"#005d73","on-background":"#0d1c2f","error-container":"#ffdad6","secondary":"#006c4a","surface-container":"#e6eeff","surface-dim":"#ccdbf4","on-primary-fixed":"#001f2a","on-tertiary":"#ffffff","secondary-container":"#82f5c1","on-surface":"#0d1c2f","surface":"#f8f9ff","surface-container-high":"#dde9ff","on-tertiary-fixed":"#001f28","inverse-primary":"#90cfec","surface-container-low":"#eff4ff","surface-tint":"#1e667f","on-error-container":"#93000a","surface-variant":"#d5e3fd","outline-variant":"#bfc8cd","primary-fixed":"#bde9ff","on-error":"#ffffff","primary-container":"#0d5c75","surface-bright":"#f8f9ff","background":"#f8f9ff","tertiary":"#004455","tertiary-fixed-dim":"#6cd3f7","surface-container-lowest":"#ffffff","on-primary-container":"#93d3ef","on-secondary":"#ffffff","primary-fixed-dim":"#90cfec","secondary-fixed":"#85f8c4","surface-container-highest":"#d5e3fd","on-secondary-fixed":"#002114","on-secondary-fixed-variant":"#005137","secondary-fixed-dim":"#68dba9","inverse-surface":"#233144","on-tertiary-fixed-variant":"#004e61","on-primary-fixed-variant":"#004d64","tertiary-fixed":"#b7eaff","inverse-on-surface":"#ebf1ff","on-tertiary-container":"#70d7fb","primary":"#004357","outline":"#70787d"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-lg":"1.25rem","space-sm":"0.5rem","margin-desktop":"2rem",margin:"1rem",gutter:"1rem","space-xs":"0.25rem","space-md":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"data-code":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"data-metric":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"data-code":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"data-metric":["24px",{lineHeight:"28px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-lg pb-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Logotipo Oficial Clínica Arias" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBzV5d-yvIdiq9viCwSHjvCfRuOm9I509lu1S0aAKW5SaUV2AeJZHPGKqFGDyYRAKqV4kxgf7GKh-_BxFX6fCq-gVRuELkWl1RLcLsewBosA2qOkbA4Hmm5RGVd_oETOVJwO6K-dONQU8zi-P22-qeRQqp2JtizGPDnMZgPnBlE7zxn64d3YaznArZRKlmmWHL4izo5afXZMkyqVfhEOw96bot3SgWB6aGcoyTF9iw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-tight">CLÍNICA ARIAS</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestión Clínica Integral</span></div></div><div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-data-code text-data-code text-on-surface-variant font-medium">PostgreSQL • Operacional</span></div><span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span></div></div><div class="px-space-md py-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm"><div class="relative"><img alt="Avatar Lic. Ruht Mateo" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6HB4pi2PuC4E7lvyXbZV3Wt5tdrNHwBS8N70jcJn8jl9K3R4cgP2obpZYy2n-Pm2SoDzGKza3vGdCHf-I4dHp4ZpRZ91LJhIn8aylTlLUhT9B81h4Q8DW-Inuol0JNVZK-QAZN78uDQq5YB5PlMsGkQ-eCIm5r5l0BY9ILM4QbEZSdcV7pw2_BviMbhgPIBwdpc913z3IF48Uc9WY11Mbl_wBGjhxtNdKINe70g"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between gap-space-xs"><span class="font-label-md text-label-md text-on-surface truncate">Lic. Ruht Mateo</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Supervisora General</span><span class="inline-flex items-center w-fit mt-space-xs px-1.5 py-0.5 rounded-full bg-primary-container font-label-sm text-[10px] leading-none text-on-primary font-bold tracking-wide">ADMINISTRADORA</span></div></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm" data-path="panel-principal" href="panel.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Panel Principal</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">KPI</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="control-de-enfermeria" href="enfermeria.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span class="font-label-md text-label-md">Control de Enfermería</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">8 Act.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="registro-de-emergencias" href="emergencias.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">emergency</span><span class="font-label-md text-label-md">Registro Emergencias</span></div><span class="font-label-sm text-label-sm bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded-full">3 Triaje</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pacientes-ingresados-y-altas" href="pacientes.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">bed</span><span class="font-label-md text-label-md">Pacientes &amp; Altas</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">24 Camas</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="laboratorio-clinico" href="laboratorio.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">biotech</span><span class="font-label-md text-label-md">Laboratorio Clínico</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">12 Pend.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="area-de-caja-y-finanzas" href="caja.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md">Caja &amp; Finanzas</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">Abierta</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reportes-y-auditoria" href="reportes.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">clinical_notes</span><span class="font-label-md text-label-md">Reportes &amp; Auditoría</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracion-y-usuarios" href="login.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md">Configuración &amp; Roles</span></div></a></nav></div><div class="p-space-md bg-surface-container-lowest border-t-0"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary">security</span><span class="font-body-sm text-body-sm text-on-surface font-medium">Sesión Cifrada SSL</span></div><a class="flex items-center justify-center p-1 rounded-lg text-outline hover:text-error hover:bg-error-container transition-colors" data-path="login" href="login.html" title="Cerrar Sesión"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span><span class="font-body-sm text-body-sm font-medium">Lunes, 24 de Octubre - 09:42 AM</span></div><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder-outline font-body-sm text-body-sm border-0 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar por Cédula, N° de Expediente o Nombre..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-label-sm text-label-sm font-semibold">Turno Mañana • Sede Principal</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Emergencia</span></button><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Cobro</span></button></div><div class="flex items-center gap-1"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Alertas Críticas" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Mensajería Interna" type="button"><span class="material-symbols-outlined text-[20px]">forum</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow -->
+<div class="relative w-full px-gutter-desktop py-space-lg flex flex-col gap-space-lg overflow-hidden">
+<div class="absolute -top-24 right-1/4 w-96 h-96 bg-primary-fixed/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/2 -left-20 w-80 h-80 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Executive Greeting & Action Bar -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="relative flex-shrink-0">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="High resolution professional portrait of Lic. Ruht Mateo, a Latina female hospital nursing director wearing clinical white scrubs and stethoscope in a modern lit medical center, smiling with calm authority and soft institutional teal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoR1mqDWS-oBZfrAf2ZMRrpbAi7qQFXEegmLEU59cI7jwNmRhTKZDJ7eh3MREkvyQ2cbyCRNTTm94xNjYD5IvzBBKuRqrSvTm-_UcaFlL_8iy5QeBMzssSTmVRwe4GLB3J9dr4vLHKn0fZ0heXSgdJAmQZcWOl4TxxDR81p264FJtELViaKQk9kpKFExDXesfcLEE-Aumy-EIQ39ssz-kkuPb1bsiNl9xAwLszyw"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Buenos días, Lic. Ruht Mateo</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wide">Turno Operativo A1</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2 mt-0.5">
+<span>Supervisora / Encargada General</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-data-code text-data-code text-on-surface">Centro Hospitalario Matriz • Sede Principal</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<!-- Time Range Selector Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded bg-surface-container-lowest font-label-md text-label-md text-primary shadow-xs transition-all" type="button">Hoy</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Esta semana</button>
+<button class="px-3 py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all" type="button">Este mes</button>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary-container text-on-primary hover:opacity-95 shadow-sm transition-opacity font-label-md text-label-md" type="button">
+<span class="material-symbols-outlined text-[18px]">summarize</span>
+<span>Generar Reporte del Día</span>
+</button>
+</div>
+</section>
+<!-- Biometric & Clinical KPI Metric Cards (6 Cards Grid) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-space-md">
+<!-- Card 1: Enfermeras de Turno -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="w-full h-1 bg-primary absolute top-0 left-0"></div>
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Enfermería Activa</span>
+<span class="material-symbols-outlined text-[18px] text-primary">diversity_1</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">12</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">100% Cuórum</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">8 diurno • 4 refuerzo</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-data-code text-data-code text-on-surface-variant">4 áreas cubiertas</span>
+<button class="font-label-sm text-label-sm text-primary hover:underline font-semibold flex items-center" type="button">
+            Asistencia <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Emergencias Hoy -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="w-full h-1 bg-error absolute top-0 left-0"></div>
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Emergencias Hoy</span>
+<span class="material-symbols-outlined text-[18px] text-error">emergency</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">28</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">4 Críticos</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">18 altas • 6 ingresados</p>
+</div>
+<!-- Micro sparkline visualization -->
+<div class="mt-space-sm">
+<svg class="w-full h-6 text-error opacity-80" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0,18 Q15,4 30,12 T60,6 T80,18 T100,8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,18 Q15,4 30,12 T60,6 T80,18 T100,8 L100,24 L0,24 Z" fill="currentColor" fill-opacity="0.1"></path>
+</svg>
+</div>
+</div>
+<!-- Card 3: Pacientes Ingresados -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="w-full h-1 bg-tertiary absolute top-0 left-0"></div>
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Ocupación Camas</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">hotel</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">34</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 40 total</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-body-sm text-body-sm text-tertiary font-semibold">85% Capacidad</span>
+<span class="font-data-code text-data-code text-outline">6 Libres</span>
+</div>
+</div>
+<div class="mt-space-md w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full transition-all duration-500" style="width: 85%"></div>
+</div>
+</div>
+<!-- Card 4: Altas Médicas -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="w-full h-1 bg-secondary absolute top-0 left-0"></div>
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Altas Médicas</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">assignment_turned_in</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-secondary font-bold">9</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Certificadas</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">3 expedientes en firma</p>
+</div>
+<div class="mt-space-md flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="font-label-sm text-label-sm font-semibold">100% Protocolo Salida</span>
+</div>
+</div>
+<!-- Card 5: Laboratorio Clínico -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="w-full h-1 bg-surface-tint absolute top-0 left-0"></div>
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Lab. Clínico</span>
+<span class="material-symbols-outlined text-[18px] text-primary">biotech</span>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-on-surface font-bold">42</span>
+<span class="font-label-sm text-label-sm text-outline font-medium">Órdenes</span>
+</div>
+<div class="flex items-center justify-between mt-1">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">28 Listos</span>
+<span class="font-label-sm text-label-sm text-error font-semibold">14 Pendientes</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between bg-surface-container-low px-2 py-1 rounded">
+<span class="font-data-code text-data-code text-on-surface">T.E. Promedio</span>
+<span class="font-data-code text-data-code text-primary font-semibold">38 min</span>
+</div>
+</div>
+<!-- Card 6: Flujo Financiero Diario -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="w-full h-1 bg-secondary absolute top-0 left-0"></div>
+<div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Balance Diario Neto</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">account_balance_wallet</span>
+</div>
+<div class="flex items-baseline gap-1">
+<span class="font-data-metric text-data-metric text-secondary font-bold">+$3,730.00</span>
+</div>
+<div class="mt-1 flex flex-col gap-0.5 font-data-code text-data-code">
+<div class="flex justify-between text-on-surface-variant">
+<span>Ingresos:</span>
+<span class="text-on-surface font-semibold">$4,850.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Egresos:</span>
+<span class="text-error font-semibold">$1,120.00</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm inline-flex items-center gap-1 self-start px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Superávit Operativo
+        </div>
+</div>
+</section>
+<!-- Main Operational Grid (2 Columns Layout) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Patient Flow Graph & Recent Real-time Movements Table (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Hourly Hospital Inflow Chart Section -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">stacked_line_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Afluencia de Pacientes y Emergencias por Hora</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Distribución cronológica de ingresos (06:00 a 22:00) • Picos en Turno Matutino</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Consultas Generales</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Emergencias Críticas</span>
+</div>
+</div>
+</div>
+<!-- Stylized Clinical Data Chart (SVG Responsive Graph with Peak Markers) -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-md relative overflow-hidden">
+<div class="flex justify-between items-center text-outline font-data-code text-data-code mb-2">
+<span>Capacidad Dinámica (Pacientes/Hora)</span>
+<span class="text-error font-semibold">Pico Crítico: 11:30 AM (14 Casos)</span>
+</div>
+<div class="w-full h-52 relative">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 800 200">
+<!-- Grid Lines -->
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="40" y2="40"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="90" y2="90"></line>
+<line class="text-surface-container-highest" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="800" y1="140" y2="140"></line>
+<line class="text-surface-container-highest" stroke="currentColor" x1="0" x2="800" y1="190" y2="190"></line>
+<!-- Consultas Generales Line & Fill -->
+<path class="text-primary-fixed opacity-40" d="M0,170 C60,165 100,120 160,85 C220,50 280,30 350,45 C420,60 480,110 540,95 C600,80 660,120 720,130 C760,135 800,140 800,140 L800,195 L0,195 Z" fill="currentColor"></path>
+<path class="text-primary" d="M0,170 C60,165 100,120 160,85 C220,50 280,30 350,45 C420,60 480,110 540,95 C600,80 660,120 720,130 C760,135 800,140 800,140" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path>
+<!-- Emergencias Line (Red) -->
+<path class="text-error" d="M0,185 C60,180 120,170 180,140 C240,110 300,50 360,55 C420,60 480,130 540,115 C600,100 660,140 720,160 C760,170 800,175 800,175" stroke="currentColor" stroke-dasharray="0" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Peak Markers -->
+<circle class="fill-surface-container-lowest stroke-primary" cx="350" cy="45" r="5" stroke-width="3"></circle>
+<circle class="fill-surface-container-lowest stroke-error" cx="360" cy="55" r="5" stroke-width="3"></circle>
+<circle class="fill-surface-container-lowest stroke-primary" cx="540" cy="95" r="4" stroke-width="2.5"></circle>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between text-on-surface-variant font-data-code text-data-code pt-2">
+<span>06:00</span>
+<span>08:00</span>
+<span>10:00</span>
+<span class="text-primary font-bold">12:00</span>
+<span>14:00</span>
+<span>16:00</span>
+<span>18:00</span>
+<span>20:00</span>
+<span>22:00</span>
+</div>
+</div>
+</section>
+<!-- Interactive Movements & Clinical Events Table -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">clinical_notes</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Actividades y Movimientos Recientes</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Sincronización en vivo con estaciones de Enfermería, Triage, Laboratorio y Caja</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-low font-data-code text-data-code text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                En directo (Sync 4s)
+              </span>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Actualizar Datos" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto -mx-space-lg px-space-lg">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg">Hora / ID</th>
+<th class="py-2.5 px-3">Paciente / Cédula</th>
+<th class="py-2.5 px-3">Departamento</th>
+<th class="py-2.5 px-3">Acción Clínica</th>
+<th class="py-2.5 px-3">Responsable</th>
+<th class="py-2.5 px-3 text-right rounded-r-lg">Estado</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-data-code text-data-code text-on-surface font-semibold">09:38 AM</span>
+<span class="font-data-code text-[10px] text-outline">EM-8821</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-primary font-bold">
+                        MG
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Marcos Galeano R.</span>
+<span class="font-data-code text-data-code text-on-surface-variant">001-190482-1</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-error">emergency</span> Emergencias
+                    </span>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">
+                    Ingreso Triaje Crítico (Dolor torácico severo)
+                  </td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface-variant">
+                    Dr. D. Morales (Emerg.)
+                  </td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                      Triaje 1 • Rojo
+                    </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-data-code text-data-code text-on-surface font-semibold">09:31 AM</span>
+<span class="font-data-code text-[10px] text-outline">LB-4509</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-primary font-bold">
+                        VT
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Valeria Torres Cruz</span>
+<span class="font-data-code text-data-code text-on-surface-variant">402-881290-3</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary">biotech</span> Laboratorio
+                    </span>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">
+                    Hemograma completo + Perfil Lipídico validado
+                  </td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface-variant">
+                    Lic. S. Castillo (Bioanálisis)
+                  </td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Entregado
+                    </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-data-code text-data-code text-on-surface font-semibold">09:20 AM</span>
+<span class="font-data-code text-[10px] text-outline">CJ-1044</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-primary font-bold">
+                        ER
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Esteban Ramírez P.</span>
+<span class="font-data-code text-data-code text-on-surface-variant">001-440219-5</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">point_of_sale</span> Caja
+                    </span>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">
+                    Pago Liquidación Hospitalaria (Recibo #R-892)
+                  </td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface-variant">
+                    Cajera M. Peña
+                  </td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[10px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      $680.00 Pagado
+                    </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-data-code text-data-code text-on-surface font-semibold">09:05 AM</span>
+<span class="font-data-code text-[10px] text-outline">HP-2311</span>
+</div>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-primary font-bold">
+                        CL
+                      </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Carmen Lozada B.</span>
+<span class="font-data-code text-data-code text-on-surface-variant">023-009182-4</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">bed</span> Hospitalización
+                    </span>
+</td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface">
+                    Emisión de Alta Médica • Sala 204 Pabellón A
+                  </td>
+<td class="py-3 px-3 font-body-sm text-body-sm text-on-surface-variant">
+                    Dr. H. Arias (Cirugía)
+                  </td>
+<td class="py-3 px-3 text-right">
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Alta Aprobada
+                    </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Mostrando últimos 4 movimientos de 142 registrados en la jornada</span>
+<a class="text-primary hover:underline font-semibold flex items-center gap-1" href="reportes.html">
+              Ver Auditoría Completa <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</section>
+</div>
+<!-- RIGHT COLUMN: Bed Occupancy, Direct Quick Access, Priority Clinical Alerts (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- Quick Direct Actions Bento Hub -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">bolt</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Accesos Rápidos Directos</h2>
+</div>
+<span class="font-data-code text-data-code text-outline">Operaciones</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-2">
+<!-- Action 1: Emergencia -->
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-error text-on-error hover:opacity-95 transition-opacity shadow-xs text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Registrar Nueva Emergencia</span>
+<span class="font-body-sm text-[11px] opacity-90">Triaje inmediato y vitales</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<!-- Action 2: Ingreso Paciente -->
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">bed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Ingreso de Paciente</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Asignar cama y pabellón</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</button>
+<!-- Action 3: Nueva Orden Lab -->
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-surface-tint text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Nueva Orden Laboratorio</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Bioanálisis y patología</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</button>
+<!-- Action 4: Cobro Recibo Caja -->
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-secondary text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">point_of_sale</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Cobro / Recibo de Caja</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Emisión fiscal y comprobantes</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-outline group-hover:text-on-surface group-hover:translate-x-1 transition-all">chevron_right</span>
+</button>
+<!-- Action 5: Cierre Diario Caja -->
+<button class="w-full flex items-center justify-between p-space-sm rounded-lg bg-surface-container text-primary hover:bg-surface-container-high transition-colors text-left group" type="button">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-md bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">lock_clock</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">Cierre Diario de Caja</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Balance de turno y arqueo</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">lock</span>
+</button>
+</div>
+</section>
+<!-- Hospital Bed Occupancy Real-time Map -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">single_bed</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Ocupación Hospitalaria</h2>
+</div>
+<span class="font-data-code text-data-code text-secondary font-bold">34/40 Ocupadas</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Ward 1: Pabellon A -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface">Pabellón A: Medicina Interna</span>
+</div>
+<span class="font-data-code text-data-code text-on-surface-variant">18/20 Camas</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 90%"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-data-code text-[11px]">
+<span>2 Camas Disponibles</span>
+<span class="text-secondary font-semibold">90% Ocupación</span>
+</div>
+</div>
+<!-- Ward 2: Pabellon B -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span class="font-label-md text-label-md text-on-surface">Pabellón B: Quirófano / Post-op</span>
+</div>
+<span class="font-data-code text-data-code text-on-surface-variant">10/12 Camas</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 83%"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-data-code text-[11px]">
+<span>2 Camas Libres (1 reservada)</span>
+<span class="text-primary font-semibold">83% Ocupación</span>
+</div>
+</div>
+<!-- Ward 3: Sala Observacion Emergencia -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-md text-label-md text-on-surface">Observación de Emergencia</span>
+</div>
+<span class="font-data-code text-data-code text-error font-bold">6/8 Camas</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center text-outline font-data-code text-[11px]">
+<span>2 Camas Disponibles</span>
+<span class="text-error font-semibold">Alta Rotación</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Priority Clinical Alerts Feed -->
+<section class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-error">notification_important</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Alertas Clínicas Prioritarias</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">3 Críticas</span>
+</div>
+<div class="flex flex-col gap-2.5">
+<!-- Alert 1 -->
+<div class="p-space-sm rounded-lg bg-error-container/40 flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] mt-0.5">timer</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-bold">Triaje Crítico en Espera</span>
+<span class="font-data-code text-[10px] text-on-error-container">Hace 6m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Paciente Marcos Galeano requiere evaluación cardiológica urgente en Box 2.</p>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">fact_check</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Pendiente de Firma de Alta</span>
+<span class="font-data-code text-[10px] text-outline">Hace 18m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">3 expedientes médicos en Sala 108 esperan visado del médico tratante para liberar camas.</p>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] mt-0.5">science</span>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Reactivos Lab. Listos</span>
+<span class="font-data-code text-[10px] text-outline">Hace 25m</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Pruebas cruzadas de hemoderivados listas para retiro por enfermería de Quirófano.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

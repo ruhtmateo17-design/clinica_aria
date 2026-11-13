@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","on-surface-variant":"#40484c","on-secondary-container":"#00714e","error":"#ba1a1a","tertiary-container":"#005d73","on-background":"#0d1c2f","error-container":"#ffdad6","secondary":"#006c4a","surface-container":"#e6eeff","surface-dim":"#ccdbf4","on-primary-fixed":"#001f2a","on-tertiary":"#ffffff","secondary-container":"#82f5c1","on-surface":"#0d1c2f","surface":"#f8f9ff","surface-container-high":"#dde9ff","on-tertiary-fixed":"#001f28","inverse-primary":"#90cfec","surface-container-low":"#eff4ff","surface-tint":"#1e667f","on-error-container":"#93000a","surface-variant":"#d5e3fd","outline-variant":"#bfc8cd","primary-fixed":"#bde9ff","on-error":"#ffffff","primary-container":"#0d5c75","surface-bright":"#f8f9ff","background":"#f8f9ff","tertiary":"#004455","tertiary-fixed-dim":"#6cd3f7","surface-container-lowest":"#ffffff","on-primary-container":"#93d3ef","on-secondary":"#ffffff","primary-fixed-dim":"#90cfec","secondary-fixed":"#85f8c4","surface-container-highest":"#d5e3fd","on-secondary-fixed":"#002114","on-secondary-fixed-variant":"#005137","secondary-fixed-dim":"#68dba9","inverse-surface":"#233144","on-tertiary-fixed-variant":"#004e61","on-primary-fixed-variant":"#004d64","tertiary-fixed":"#b7eaff","inverse-on-surface":"#ebf1ff","on-tertiary-container":"#70d7fb","primary":"#004357","outline":"#70787d"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-lg":"1.25rem","space-sm":"0.5rem","margin-desktop":"2rem",margin:"1rem",gutter:"1rem","space-xs":"0.25rem","space-md":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"data-code":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"data-metric":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"data-code":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"data-metric":["24px",{lineHeight:"28px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-lg pb-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Logotipo Oficial Clínica Arias" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBzV5d-yvIdiq9viCwSHjvCfRuOm9I509lu1S0aAKW5SaUV2AeJZHPGKqFGDyYRAKqV4kxgf7GKh-_BxFX6fCq-gVRuELkWl1RLcLsewBosA2qOkbA4Hmm5RGVd_oETOVJwO6K-dONQU8zi-P22-qeRQqp2JtizGPDnMZgPnBlE7zxn64d3YaznArZRKlmmWHL4izo5afXZMkyqVfhEOw96bot3SgWB6aGcoyTF9iw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-tight">CLÍNICA ARIAS</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestión Clínica Integral</span></div></div><div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-data-code text-data-code text-on-surface-variant font-medium">PostgreSQL • Operacional</span></div><span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span></div></div><div class="px-space-md py-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm"><div class="relative"><img alt="Avatar Lic. Ruht Mateo" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6HB4pi2PuC4E7lvyXbZV3Wt5tdrNHwBS8N70jcJn8jl9K3R4cgP2obpZYy2n-Pm2SoDzGKza3vGdCHf-I4dHp4ZpRZ91LJhIn8aylTlLUhT9B81h4Q8DW-Inuol0JNVZK-QAZN78uDQq5YB5PlMsGkQ-eCIm5r5l0BY9ILM4QbEZSdcV7pw2_BviMbhgPIBwdpc913z3IF48Uc9WY11Mbl_wBGjhxtNdKINe70g"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between gap-space-xs"><span class="font-label-md text-label-md text-on-surface truncate">Lic. Ruht Mateo</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Supervisora General</span><span class="inline-flex items-center w-fit mt-space-xs px-1.5 py-0.5 rounded-full bg-primary-container font-label-sm text-[10px] leading-none text-on-primary font-bold tracking-wide">ADMINISTRADORA</span></div></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="panel-principal" href="panel.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Panel Principal</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">KPI</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="control-de-enfermeria" href="enfermeria.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">vital_signs</span><span class="font-label-md text-label-md">Control de Enfermería</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">8 Act.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="registro-de-emergencias" href="emergencias.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">emergency</span><span class="font-label-md text-label-md">Registro Emergencias</span></div><span class="font-label-sm text-label-sm bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded-full">3 Triaje</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm" data-path="pacientes-ingresados-y-altas" href="pacientes.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">bed</span><span class="font-label-md text-label-md">Pacientes &amp; Altas</span></div><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">24 Camas</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="laboratorio-clinico" href="laboratorio.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">biotech</span><span class="font-label-md text-label-md">Laboratorio Clínico</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">12 Pend.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="area-de-caja-y-finanzas" href="caja.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">point_of_sale</span><span class="font-label-md text-label-md">Caja &amp; Finanzas</span></div><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">Abierta</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reportes-y-auditoria" href="reportes.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">clinical_notes</span><span class="font-label-md text-label-md">Reportes &amp; Auditoría</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracion-y-usuarios" href="login.html"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-label-md text-label-md">Configuración &amp; Roles</span></div></a></nav></div><div class="p-space-md bg-surface-container-lowest border-t-0"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary">security</span><span class="font-body-sm text-body-sm text-on-surface font-medium">Sesión Cifrada SSL</span></div><a class="flex items-center justify-center p-1 rounded-lg text-outline hover:text-error hover:bg-error-container transition-colors" data-path="login" href="login.html" title="Cerrar Sesión"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span><span class="font-body-sm text-body-sm font-medium">Lunes, 24 de Octubre - 09:42 AM</span></div><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder-outline font-body-sm text-body-sm border-0 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar por Cédula, N° de Expediente o Nombre..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-label-sm text-label-sm font-semibold">Turno Mañana • Sede Principal</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Emergencia</span></button><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Cobro</span></button></div><div class="flex items-center gap-1"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Alertas Críticas" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Mensajería Interna" type="button"><span class="material-symbols-outlined text-[20px]">forum</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-header & Occupancy Metrics -->
+<section class="px-gutter-desktop py-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-primary font-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">domain_verification</span>
+<span>Gestión de Hospitalización • Pabellón A y B</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Pacientes Ingresados &amp; Control de Altas</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Supervisión clínica continua, ocupación de camas por servicio y liberación protocolar de estancias con auditoría médica inmediata.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md shadow-sm hover:bg-tertiary transition-colors" onclick="openNewAdmissionModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+<span>Nuevo Ingreso Clínico</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md hover:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Exportar Censo Diario</span>
+</button>
+</div>
+</div>
+<!-- Occupancy KPI Bento -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Capacidad Ocupada</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-high text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">hotel</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-data-metric text-data-metric text-on-surface">34</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">/ 40 Camas Activas</span>
+</div>
+<div class="mt-3 w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 85%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-2 block">85.0% Índice de Ocupación Hospitalaria</span>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Camas Disponibles</span>
+<span class="w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-data-metric text-data-metric text-secondary">6</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Unidades Desinfectadas</span>
+</div>
+<div class="mt-space-xs flex items-center gap-space-xs text-secondary font-label-sm">
+<span class="material-symbols-outlined text-[14px]">cleaning_services</span>
+<span>4 en Sala General • 2 en Aislamiento</span>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Altas Otorgadas Hoy</span>
+<span class="w-8 h-8 rounded-lg bg-surface-container-high text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-data-metric text-data-metric text-tertiary">9</span>
+<span class="font-body-sm text-body-sm text-secondary font-semibold">+3 vs. Promedio Semanal</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-1 block">Última validación hace 24 min</span>
+</div>
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Pendientes Evaluación</span>
+<span class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-data-metric text-data-metric text-on-error-container">4</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Listos para pase médico</span>
+</div>
+<span class="font-body-sm text-[11px] text-error font-medium mt-1 flex items-center gap-1">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+          2 con orden preliminar de alta firmada
+        </span>
+</div>
+</div>
+<!-- Service Switcher & Filters -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md bg-surface-container-lowest p-space-sm rounded-2xl shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto pb-1 md:pb-0" id="filterContainer">
+<button class="filter-btn px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md flex items-center gap-2 whitespace-nowrap transition-all" onclick="setFilter('all', this)" type="button">
+<span>Todos los Pacientes</span>
+<span class="px-1.5 py-0.2 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-[11px]" id="countAll">6</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-label-md flex items-center gap-2 whitespace-nowrap transition-all" onclick="setFilter('medicina', this)" type="button">
+<span>Medicina General</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px]">2</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-label-md flex items-center gap-2 whitespace-nowrap transition-all" onclick="setFilter('cirugia', this)" type="button">
+<span>Cirugía</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px]">2</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-label-md flex items-center gap-2 whitespace-nowrap transition-all" onclick="setFilter('uci', this)" type="button">
+<span>UCI / Observación</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[11px]">1</span>
+</button>
+<button class="filter-btn px-4 py-2 rounded-xl bg-secondary-container text-on-secondary-container font-label-md flex items-center gap-2 whitespace-nowrap transition-all" onclick="setFilter('listo', this)" type="button">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span>Listos para Alta</span>
+<span class="px-1.5 py-0.2 rounded-full bg-secondary text-on-secondary font-label-sm text-[11px]">2</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-full md:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">tune</span>
+<input class="w-full pl-9 pr-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface placeholder-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="liveSearchInput" oninput="searchPatients(this.value)" placeholder="Filtrar por médico, cama..." type="text"/>
+</div>
+<div class="flex rounded-xl bg-surface-container-low p-0.5">
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm" id="viewTableBtn" onclick="switchView('table')" title="Vista Tabla Compacta" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface" id="viewCardsBtn" onclick="switchView('cards')" title="Vista Tarjetas Clínicas" type="button">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 1: Active Inpatients (Table View default + Cards fallback) -->
+<section class="px-gutter-desktop pb-space-xl flex flex-col gap-space-lg">
+<!-- View Mode: Table -->
+<div class="w-full bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden" id="tableViewWrapper">
+<div class="px-space-lg py-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">monitor_heart</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Censo Activo de Pacientes Internados</h2>
+<span class="font-label-sm text-[11px] px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold" id="activeCounterBadge">6 pacientes visibles</span>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-data-code text-data-code">
+<span class="material-symbols-outlined text-[14px]">sync</span>
+<span>Actualización biométrica en vivo</span>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">Expediente / Ingreso</th>
+<th class="py-3 px-4 font-semibold">Paciente &amp; Demografía</th>
+<th class="py-3 px-4 font-semibold">Ubicación</th>
+<th class="py-3 px-4 font-semibold">Diagnóstico Clínico de Ingreso</th>
+<th class="py-3 px-4 font-semibold">Equipo Asignado</th>
+<th class="py-3 px-4 font-semibold">Estado Clínico</th>
+<th class="py-3 px-4 font-semibold text-right">Acción Principal</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-body-sm font-body-sm" id="patientTableBody">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors patient-record" data-age="48" data-bed="Hab. 204 - Cama B" data-date="21/10/2023 08:30" data-dept="cirugia" data-diag="Apendicitis aguda postquirúrgica complicada (Fase II)" data-exp="EXP-9421" data-gender="Masculino" data-ingreso="ING-2023-410" data-med="Dr. Fernando Castillo (COL-5928)" data-name="Donato Vargas Morales" data-nurse="Enf. Rocío Méndez" data-obs="Herida quirúrgica limpia, afebril últimas 48h, tolera dieta sólida blanda. Analítica normalizada." data-ready="true" data-status="Evolución favorable">
+<td class="py-3 px-4 align-top">
+<span class="font-data-code text-primary font-bold block">EXP-9421</span>
+<span class="font-data-code text-on-surface-variant text-[11px]">ING-2023-410</span>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">DV</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">Donato Vargas Morales</span>
+<span class="text-on-surface-variant text-body-sm text-[12px]">48 años • Masc. • Ingreso: 21/10 08:30</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high font-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">single_bed</span> Hab. 204 - Cama B
+                </span>
+<span class="block text-[11px] text-on-surface-variant mt-0.5">Pabellón Cirugía</span>
+</td>
+<td class="py-3 px-4 align-top max-w-xs">
+<p class="font-body-md text-on-surface font-medium line-clamp-1">Apendicitis aguda postquirúrgica</p>
+<p class="text-on-surface-variant text-[12px] truncate">Evolución post-apendicectomía laparoscópica sin signos de sepsis.</p>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="text-[12px]">
+<span class="text-on-surface font-medium block">Dr. Fernando Castillo</span>
+<span class="text-on-surface-variant flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield_person</span> Enf. Rocío Méndez
+                  </span>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Evolución favorable
+                </span>
+<span class="block text-[10px] text-secondary font-bold mt-1 uppercase tracking-wide">Listo para Alta</span>
+</td>
+<td class="py-3 px-4 align-top text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm hover:opacity-90 transition-opacity" onclick="openDischargeModal('EXP-9421')" type="button">
+<span class="material-symbols-outlined text-[16px]">output</span>
+<span>DAR DE ALTA</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors patient-record" data-age="62" data-bed="Hab. 102 - Cama A" data-date="22/10/2023 14:15" data-dept="medicina" data-diag="Neumonía adquirida en la comunidad (NAC) severa moderada" data-exp="EXP-8812" data-gender="Femenino" data-ingreso="ING-2023-418" data-med="Dra. Jimena Paredes (COL-6310)" data-name="María Elena Duarte Sosa" data-nurse="Enf. Carlos Silva" data-obs="Saturación 95% con cánula nasal a 2L. Concluyendo segundo ciclo de Ceftriaxona. Hemocultivos pendientes." data-ready="false" data-status="Observación estricta">
+<td class="py-3 px-4 align-top">
+<span class="font-data-code text-primary font-bold block">EXP-8812</span>
+<span class="font-data-code text-on-surface-variant text-[11px]">ING-2023-418</span>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">MD</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">María Elena Duarte Sosa</span>
+<span class="text-on-surface-variant text-body-sm text-[12px]">62 años • Fem. • Ingreso: 22/10 14:15</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high font-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">single_bed</span> Hab. 102 - Cama A
+                </span>
+<span class="block text-[11px] text-on-surface-variant mt-0.5">Medicina Interna</span>
+</td>
+<td class="py-3 px-4 align-top max-w-xs">
+<p class="font-body-md text-on-surface font-medium line-clamp-1">Neumonía adquirida en la comunidad</p>
+<p class="text-on-surface-variant text-[12px] truncate">Patrón intersticial basal bilateral. Curba febril en meseta.</p>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="text-[12px]">
+<span class="text-on-surface font-medium block">Dra. Jimena Paredes</span>
+<span class="text-on-surface-variant flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield_person</span> Enf. Carlos Silva
+                  </span>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Observación estricta
+                </span>
+<span class="block text-[10px] text-on-surface-variant mt-1">Requiere 24h más ATB</span>
+</td>
+<td class="py-3 px-4 align-top text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" onclick="openDischargeModal('EXP-8812')" type="button">
+<span class="material-symbols-outlined text-[16px]">output</span>
+<span>DAR DE ALTA</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors patient-record" data-age="55" data-bed="Hab. 106 - Cama B" data-date="20/10/2023 19:40" data-dept="medicina" data-diag="Crisis hipertensiva resuelta / Diabetes Mellitus Tipo 2 descompensada estabilizada" data-exp="EXP-7729" data-gender="Masculino" data-ingreso="ING-2023-421" data-med="Dr. Fernando Castillo (COL-5928)" data-name="Guillermo Arévalo Peña" data-nurse="Enf. Sandra Ortega" data-obs="Presión arterial estabilizada en 120/80 mmHg. Glicemia en ayunas 108 mg/dL. Glucómetro ambulatorio entregado." data-ready="true" data-status="Estable">
+<td class="py-3 px-4 align-top">
+<span class="font-data-code text-primary font-bold block">EXP-7729</span>
+<span class="font-data-code text-on-surface-variant text-[11px]">ING-2023-421</span>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">GA</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">Guillermo Arévalo Peña</span>
+<span class="text-on-surface-variant text-body-sm text-[12px]">55 años • Masc. • Ingreso: 20/10 19:40</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high font-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">single_bed</span> Hab. 106 - Cama B
+                </span>
+<span class="block text-[11px] text-on-surface-variant mt-0.5">Medicina Interna</span>
+</td>
+<td class="py-3 px-4 align-top max-w-xs">
+<p class="font-body-md text-on-surface font-medium line-clamp-1">Crisis Hipertensiva estabilizada</p>
+<p class="text-on-surface-variant text-[12px] truncate">Control hidroelectrolítico satisfactorio. Sin daño de órgano blanco.</p>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="text-[12px]">
+<span class="text-on-surface font-medium block">Dr. Fernando Castillo</span>
+<span class="text-on-surface-variant flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield_person</span> Enf. Sandra Ortega
+                  </span>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Estable
+                </span>
+<span class="block text-[10px] text-secondary font-bold mt-1 uppercase tracking-wide">Listo para Alta</span>
+</td>
+<td class="py-3 px-4 align-top text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm hover:opacity-90 transition-opacity" onclick="openDischargeModal('EXP-7729')" type="button">
+<span class="material-symbols-outlined text-[16px]">output</span>
+<span>DAR DE ALTA</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors patient-record" data-age="34" data-bed="Hab. 210 - Cama A" data-date="23/10/2023 11:20" data-dept="cirugia" data-diag="Colecistectomía laparoscópica en posquirúrgico inmediato" data-exp="EXP-9504" data-gender="Femenino" data-ingreso="ING-2023-433" data-med="Dr. Alberto Samaniego (COL-4822)" data-name="Valeria Guzmán Cisneros" data-nurse="Enf. Rocío Méndez" data-obs="Drenaje mínimo serohemático de 20cc. Dolor postoperatorio controlado con analgesia escalonada." data-ready="false" data-status="Observación estricta">
+<td class="py-3 px-4 align-top">
+<span class="font-data-code text-primary font-bold block">EXP-9504</span>
+<span class="font-data-code text-on-surface-variant text-[11px]">ING-2023-433</span>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">VG</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">Valeria Guzmán Cisneros</span>
+<span class="text-on-surface-variant text-body-sm text-[12px]">34 años • Fem. • Ingreso: 23/10 11:20</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high font-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">single_bed</span> Hab. 210 - Cama A
+                </span>
+<span class="block text-[11px] text-on-surface-variant mt-0.5">Pabellón Quirúrgico</span>
+</td>
+<td class="py-3 px-4 align-top max-w-xs">
+<p class="font-body-md text-on-surface font-medium line-clamp-1">Colecistectomía Laparoscópica</p>
+<p class="text-on-surface-variant text-[12px] truncate">Transquirúrgico sin incidentes. En tolerancia a líquidos claros.</p>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="text-[12px]">
+<span class="text-on-surface font-medium block">Dr. Alberto Samaniego</span>
+<span class="text-on-surface-variant flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield_person</span> Enf. Rocío Méndez
+                  </span>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Observación estricta
+                </span>
+<span class="block text-[10px] text-on-surface-variant mt-1">Revisión matutina pendiente</span>
+</td>
+<td class="py-3 px-4 align-top text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" onclick="openDischargeModal('EXP-9504')" type="button">
+<span class="material-symbols-outlined text-[16px]">output</span>
+<span>DAR DE ALTA</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors patient-record" data-age="71" data-bed="Hab. UCI-03" data-date="18/10/2023 22:10" data-dept="uci" data-diag="Insuficiencia Cardíaca Congestiva descompensada NYHA III" data-exp="EXP-6110" data-gender="Masculino" data-ingreso="ING-2023-398" data-med="Dr. Mateo Valdivia (COL-4091)" data-name="Sebastián Ponce Rios" data-nurse="Lic. Karla Benítez" data-obs="Diuresis forzada efectiva con furosemida. Disnea de mínimos esfuerzos en remisión. Ecocardiograma de control hoy." data-ready="false" data-status="Observación estricta">
+<td class="py-3 px-4 align-top">
+<span class="font-data-code text-primary font-bold block">EXP-6110</span>
+<span class="font-data-code text-on-surface-variant text-[11px]">ING-2023-398</span>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">SP</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">Sebastián Ponce Rios</span>
+<span class="text-on-surface-variant text-body-sm text-[12px]">71 años • Masc. • Ingreso: 18/10 22:10</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-error-container text-on-error-container font-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">vital_signs</span> Hab. UCI-03
+                </span>
+<span class="block text-[11px] text-on-surface-variant mt-0.5">Unidad Crítica</span>
+</td>
+<td class="py-3 px-4 align-top max-w-xs">
+<p class="font-body-md text-on-surface font-medium line-clamp-1">ICC Descompensada NYHA III</p>
+<p class="text-on-surface-variant text-[12px] truncate">Monitor multiparamétrico activo. Sin requerimiento inotrópico actual.</p>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="text-[12px]">
+<span class="text-on-surface font-medium block">Dr. Mateo Valdivia</span>
+<span class="text-on-surface-variant flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield_person</span> Lic. Karla Benítez
+                  </span>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Observación estricta
+                </span>
+<span class="block text-[10px] text-on-surface-variant mt-1">Paso a planta programado</span>
+</td>
+<td class="py-3 px-4 align-top text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm hover:opacity-90 transition-opacity" onclick="openDischargeModal('EXP-6110')" type="button">
+<span class="material-symbols-outlined text-[16px]">output</span>
+<span>DAR DE ALTA</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors patient-record" data-age="27" data-bed="Hab. 104 - Cama A" data-date="22/10/2023 21:00" data-dept="medicina" data-diag="Pielonefritis aguda izquierda sin urosepsis" data-exp="EXP-9230" data-gender="Femenino" data-ingreso="ING-2023-429" data-med="Dra. Jimena Paredes (COL-6310)" data-name="Camila Rivas Santillana" data-nurse="Enf. Sandra Ortega" data-obs="Remisión de puñopercusión lumbar. Tolerancia gástrica adecuada. Urocultivo tipificó E. coli multisensible." data-ready="false" data-status="Evolución favorable">
+<td class="py-3 px-4 align-top">
+<span class="font-data-code text-primary font-bold block">EXP-9230</span>
+<span class="font-data-code text-on-surface-variant text-[11px]">ING-2023-429</span>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary text-xs">CR</div>
+<div>
+<span class="font-label-md text-on-surface block font-semibold">Camila Rivas Santillana</span>
+<span class="text-on-surface-variant text-body-sm text-[12px]">27 años • Fem. • Ingreso: 22/10 21:00</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high font-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">single_bed</span> Hab. 104 - Cama A
+                </span>
+<span class="block text-[11px] text-on-surface-variant mt-0.5">Medicina General</span>
+</td>
+<td class="py-3 px-4 align-top max-w-xs">
+<p class="font-body-md text-on-surface font-medium line-clamp-1">Pielonefritis Aguda Izquierda</p>
+<p class="text-on-surface-variant text-[12px] truncate">48h afebril. Terapia endovenosa cumplida, lista para cambio oral.</p>
+</td>
+<td class="py-3 px-4 align-top">
+<div class="text-[12px]">
+<span class="text-on-surface font-medium block">Dra. Jimena Paredes</span>
+<span class="text-on-surface-variant flex items-center gap-1 text-[11px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">shield_person</span> Enf. Sandra Ortega
+                  </span>
+</div>
+</td>
+<td class="py-3 px-4 align-top">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Evolución favorable
+                </span>
+<span class="block text-[10px] text-on-surface-variant mt-1">Candidata a alta vespertina</span>
+</td>
+<td class="py-3 px-4 align-top text-right">
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm hover:opacity-90 transition-opacity" onclick="openDischargeModal('EXP-9230')" type="button">
+<span class="material-symbols-outlined text-[16px]">output</span>
+<span>DAR DE ALTA</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- View Mode: Cards (hidden by default) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="cardsViewWrapper">
+<!-- Card Template rendered via JS for synchrony -->
+</div>
+</section>
+<!-- SECTION 3: Tab & History of Discharged Patients (Auditoría Médica) -->
+<section class="px-gutter-desktop pb-space-xl">
+<div class="bg-surface-container-lowest rounded-2xl shadow-sm overflow-hidden p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md border-b-0">
+<div>
+<div class="flex items-center gap-space-xs text-secondary font-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Auditoría &amp; Trazabilidad Clínica</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Historial de Pacientes Dados de Alta</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Registro cronológico inmutable de egresos hospitalarios, firmas de conformidad y control de reingresos.
+          </p>
+</div>
+<!-- Search & Date Filter for Audit -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">calendar_month</span>
+<input class="pl-9 pr-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" type="date" value="2023-10-24"/>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-56 pl-9 pr-3 py-1.5 rounded-xl bg-surface-container-low text-on-surface placeholder-outline font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="auditSearchInput" oninput="filterAuditRecords(this.value)" placeholder="Buscar EXP o Médico..." type="text"/>
+</div>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-xl bg-surface-container-high text-on-surface font-label-sm hover:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Libro de Altas</span>
+</button>
+</div>
+</div>
+<!-- History Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">Fecha/Hora Alta</th>
+<th class="py-3 px-4 font-semibold">N° Expediente</th>
+<th class="py-3 px-4 font-semibold">Paciente Egresado</th>
+<th class="py-3 px-4 font-semibold">Cama Liberada</th>
+<th class="py-3 px-4 font-semibold">Diagnóstico Definitivo</th>
+<th class="py-3 px-4 font-semibold">Médico Responsable</th>
+<th class="py-3 px-4 font-semibold">Cita Control</th>
+<th class="py-3 px-4 font-semibold text-right">Expediente Digital</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm" id="auditHistoryTableBody">
+<tr class="hover:bg-surface-container-low/50 transition-colors audit-row" data-search="EXP-8104 Teresa Mendieta Castro Dr. Fernando Castillo">
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-data-code text-on-surface font-bold">24/10/2023</span>
+<span class="block text-[11px] text-on-surface-variant">08:50 AM</span>
+</td>
+<td class="py-3 px-4 font-data-code font-bold text-primary">EXP-8104</td>
+<td class="py-3 px-4">
+<span class="font-label-md text-on-surface block">Teresa Mendieta Castro</span>
+<span class="text-[11px] text-on-surface-variant">59 años • Femenino</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-secondary">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Hab. 108 - Cama A
+                </span>
+</td>
+<td class="py-3 px-4 max-w-xs">
+<p class="font-body-md text-on-surface text-[13px] truncate">Gastroenteritis infecciosa resuelta con rehidratación IV</p>
+</td>
+<td class="py-3 px-4 text-[12px]">
+<span class="font-medium text-on-surface block">Dr. Fernando Castillo</span>
+<span class="text-outline text-[11px]">COL-5928</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="text-on-surface text-[12px] font-medium">31/10/2023 • 10:00</span>
+<span class="block text-[10px] text-secondary">Consulta Externa</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-sm text-[12px] transition-colors" onclick="previewDischargeDocument('EXP-8104', 'Teresa Mendieta Castro', 'Gastroenteritis aguda resuelta', 'Dr. Fernando Castillo (COL-5928)', '31/10/2023 - 10:00 AM', 'Ciprofloxacino 500mg c/12h por 3 días más. Probióticos y dieta astringente.')" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Ver Acta</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors audit-row" data-search="EXP-8702 Raúl Mendoza Morales Dra. Jimena Paredes">
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="font-data-code text-on-surface font-bold">24/10/2023</span>
+<span class="block text-[11px] text-on-surface-variant">07:15 AM</span>
+</td>
+<td class="py-3 px-4 font-data-code font-bold text-primary">EXP-8702</td>
+<td class="py-3 px-4">
+<span class="font-label-md text-on-surface block">Raúl Mendoza Morales</span>
+<span class="text-[11px] text-on-surface-variant">42 años • Masculino</span>
+</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-surface-container-high text-[11px] font-medium text-secondary">
+<span class="material-symbols-outlined text-[12px]">done_all</span> Hab. 201 - Cama B
+                </span>
+</td>
+<td class="py-3 px-4 max-w-xs">
+<p class="font-body-md text-on-surface text-[13px] truncate">Hernioplastia inguinal derecha electiva sin complicaciones</p>
+</td>
+<td class="py-3 px-4 text-[12px]">
+<span class="font-medium text-on-surface block">Dra. Jimena Paredes</span>
+<span class="text-outline text-[11px]">COL-6310</span>
+</td>
+<td class="py-3 px-4 whitespace-nowrap">
+<span class="text-on-surface text-[12px] font-medium">02/11/2023 • 11:30</span>
+<span class="block text-[10px] text-secondary">Retiro de Puntos</span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-sm text-[12px] transition-colors" onclick="previewDischargeDocument('EXP-8702', 'Raúl Mendoza Morales', 'Hernioplastia inguinal electiva', 'Dra. Jimena Paredes (COL-6310)', '02/11/2023 - 11:30 AM', 'Paracetamol 1g condicionado a dolor. Curación de herida con gasa seca cada 48h.')" type="button">
+<span class="material-symbols-outlined text-[14px]">description</span>
+<span>Ver Acta</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Modal / Vista de 'Proceso Formal de Alta Médica' -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-on-surface/40 backdrop-blur-sm" id="dischargeModal">
+<div class="relative w-full max-w-4xl max-h-[942px] bg-surface-container-lowest rounded-2xl shadow-xl flex flex-col overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="px-space-lg py-space-md bg-primary text-on-primary flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-on-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">assignment_turned_in</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-primary">Protocolo de Formalización de Alta Médica</h3>
+<span class="font-label-sm text-on-primary-container text-[11px] block">CLÍNICA ARIAS • Departamento de Hospitalización y Auditoría</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-lg bg-on-primary/10 hover:bg-on-primary/20 text-on-primary flex items-center justify-center transition-colors" onclick="closeDischargeModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body (Two-Column Layout) -->
+<div class="p-space-lg overflow-y-auto space-y-space-md">
+<!-- Patient Banner Information -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold text-lg" id="modalPatientInitials">DV</div>
+<div>
+<span class="font-headline-sm text-on-surface font-bold text-[18px]" id="modalPatientName">Donato Vargas Morales</span>
+<div class="flex items-center gap-space-sm text-[12px] text-on-surface-variant font-data-code mt-0.5">
+<span class="font-semibold text-primary" id="modalPatientExp">EXP-9421</span>
+<span>•</span>
+<span id="modalPatientDemog">48 años • Masculino</span>
+<span>•</span>
+<span class="font-semibold text-on-surface" id="modalPatientBed">Hab. 204 - Cama B</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Cama asignada lista para liberación
+            </span>
+</div>
+</div>
+<!-- Form Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Left Column: Diagnostic & Legal Times -->
+<div class="space-y-space-md">
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Fecha y Hora de Egreso Formal</label>
+<div class="grid grid-cols-2 gap-2">
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="modalDate" type="date" value="2023-10-24"/>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="modalTime" type="time" value="10:30"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Médico que Autoriza el Alta</label>
+<div class="relative">
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm appearance-none focus:outline-none focus:ring-1 focus:ring-primary pr-8" id="modalDoctor">
+<option value="Dr. Fernando Castillo (COL-5928)">Dr. Fernando Castillo — Especialista Cirugía General (COL-5928)</option>
+<option value="Dra. Jimena Paredes (COL-6310)">Dra. Jimena Paredes — Especialista Medicina Interna (COL-6310)</option>
+<option value="Dr. Alberto Samaniego (COL-4822)">Dr. Alberto Samaniego — Cirugía Laparoscópica (COL-4822)</option>
+<option value="Dr. Mateo Valdivia (COL-4091)">Dr. Mateo Valdivia — Medicina Crítica / UCI (COL-4091)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Diagnóstico Definitivo de Egreso</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="modalDiagnosis" placeholder="Describa el diagnóstico final resolutivo..." rows="3"></textarea>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Cita de Control Ambulatorio Programada</label>
+<div class="grid grid-cols-2 gap-2">
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="modalFollowupDate" type="date" value="2023-11-02"/>
+<input class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="modalFollowupTime" type="time" value="09:00"/>
+</div>
+</div>
+</div>
+<!-- Right Column: Home Indications & Discharge Orders -->
+<div class="space-y-space-md">
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Indicaciones Médicas &amp; Receta para el Hogar</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary leading-relaxed" id="modalPrescription" placeholder="Fármacos, posología, horarios, cuidados posturales y régimen alimenticio..." rows="4"></textarea>
+<span class="text-[11px] text-on-surface-variant block">Se imprimirá en el anexo de instrucciones para el familiar/paciente.</span>
+</div>
+<div class="space-y-1">
+<label class="font-label-sm text-on-surface-variant uppercase tracking-wider block font-semibold">Observaciones Clínicas Finales &amp; Signos de Alarma</label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary" id="modalObservations" placeholder="Instrucciones en caso de fiebre, dolor persistente, supuración de herida..." rows="3"></textarea>
+</div>
+<!-- Pre-discharge safety check -->
+<div class="p-3 rounded-xl bg-surface-container-high/60 space-y-2">
+<span class="font-label-sm text-primary font-bold block uppercase tracking-wide text-[11px]">Lista de Chequeo de Seguridad Clínica</span>
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-[12px] text-on-surface">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0" id="checkCatheter" type="checkbox"/>
+<span>Retiro de catéter venoso periférico / vías centrales verificado</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-[12px] text-on-surface">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0" id="checkMeds" type="checkbox"/>
+<span>Medicamentos propios devueltos y receta explicada</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-2 text-outline font-body-sm text-[12px]">
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+<span>Al confirmar, la cama pasará a estado de "Desinfección Inmediata".</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<button class="px-4 py-2 rounded-xl bg-surface-container-high text-on-surface font-label-md hover:bg-surface-container-highest transition-colors" onclick="closeDischargeModal()" type="button">
+            Cancelar
+          </button>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-tertiary text-on-tertiary font-label-md hover:bg-tertiary-container transition-colors shadow-sm" onclick="confirmDischargeAction(true)" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Generar e Imprimir Acta Oficial</span>
+</button>
+<button class="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-secondary text-on-secondary font-label-md hover:opacity-90 transition-opacity shadow-sm" onclick="confirmDischargeAction(false)" type="button">
+<span class="material-symbols-outlined text-[18px]">check</span>
+<span>Confirmar Alta y Guardar</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- PRINTABLE / AUDIT CERTIFICATE MODAL VIEW -->
+<div class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-on-surface/50 backdrop-blur-sm overflow-y-auto" id="printDocumentModal">
+<div class="relative w-full max-w-3xl bg-surface-container-lowest rounded-2xl shadow-2xl p-8 flex flex-col gap-6 my-auto text-on-surface">
+<!-- Actions Bar -->
+<div class="flex items-center justify-between no-print bg-surface-container-low p-2 rounded-xl">
+<span class="font-label-sm text-primary font-bold px-2">DOCUMENTO OFICIAL DE EGRESO HOSPITALARIO</span>
+<div class="flex items-center gap-2">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Imprimir</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface" onclick="closePrintModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Official Letterhead Header -->
+<div class="flex items-start justify-between border-b pb-4">
+<div class="flex items-center gap-3">
+<img alt="Logotipo Oficial Clínica Arias" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBzV5d-yvIdiq9viCwSHjvCfRuOm9I509lu1S0aAKW5SaUV2AeJZHPGKqFGDyYRAKqV4kxgf7GKh-_BxFX6fCq-gVRuELkWl1RLcLsewBosA2qOkbA4Hmm5RGVd_oETOVJwO6K-dONQU8zi-P22-qeRQqp2JtizGPDnMZgPnBlE7zxn64d3YaznArZRKlmmWHL4izo5afXZMkyqVfhEOw96bot3SgWB6aGcoyTF9iw"/>
+<div>
+<h2 class="font-headline-md text-primary font-bold leading-none">CLÍNICA ARIAS</h2>
+<span class="font-label-sm text-[11px] text-outline uppercase tracking-wider block mt-1">Servicio de Hospitalización y Cuidados Intermedios</span>
+<span class="text-[10px] text-on-surface-variant block">RNC: 101-92384-2 • Licencia Sanitaria SNS-2023-882</span>
+</div>
+</div>
+<div class="text-right">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-sm font-bold text-[12px] uppercase">Acta Oficial de Alta</span>
+<div class="mt-2 text-right">
+<span class="font-data-code text-body-sm font-bold block" id="docExp">EXP-9421</span>
+<span class="font-data-code text-[11px] text-on-surface-variant block" id="docDate">24/10/2023 10:30 AM</span>
+</div>
+</div>
+</div>
+<!-- Certificate Content -->
+<div class="space-y-4 text-body-sm">
+<div class="bg-surface-container-low p-3 rounded-lg grid grid-cols-2 gap-2 text-xs">
+<div><strong class="text-on-surface">Paciente:</strong> <span id="docPatient">Donato Vargas Morales</span></div>
+<div><strong class="text-on-surface">Servicio:</strong> <span>Hospitalización General Pabellón A</span></div>
+<div><strong class="text-on-surface">Médico Tratante:</strong> <span id="docDoctor">Dr. Fernando Castillo (COL-5928)</span></div>
+<div><strong class="text-on-surface">Próximo Control:</strong> <span id="docNextAppointment">02/11/2023 - 09:00 AM</span></div>
+</div>
+<div>
+<h4 class="font-label-md uppercase tracking-wider text-primary font-bold text-xs mb-1">1. Diagnóstico de Egreso</h4>
+<p class="p-3 bg-surface-container-low rounded-lg font-body-sm text-[13px]" id="docDiagText">
+            Apendicitis aguda postquirúrgica resuelta con apendicectomía laparoscópica sin complicaciones residuales.
+          </p>
+</div>
+<div>
+<h4 class="font-label-md uppercase tracking-wider text-primary font-bold text-xs mb-1">2. Prescripción Médica Domiciliaria</h4>
+<p class="p-3 bg-surface-container-low rounded-lg font-body-sm text-[13px] whitespace-pre-line" id="docRxText">
+            1. Ciprofloxacino 500 mg VO cada 12 horas por 3 días más.
+            2. Ketorolaco 10 mg VO cada 8 horas por 2 días en caso de dolor.
+            3. Dieta hiperproteica blanda, hidratación oral abundante. Reposo relativo 7 días.
+          </p>
+</div>
+<!-- Official Signatures -->
+<div class="pt-8 grid grid-cols-2 gap-8 text-center mt-6">
+<div class="flex flex-col items-center">
+<div class="w-48 h-12 border-b-0 flex items-center justify-center">
+<span class="font-data-code text-[12px] italic text-primary font-bold">Firma Digital SSL: #99482-FC</span>
+</div>
+<div class="w-48 border-t border-outline/40 pt-1">
+<span class="font-label-md block text-xs" id="docSignDoctor">Dr. Fernando Castillo</span>
+<span class="text-[10px] text-on-surface-variant block">Médico Tratante • Reg. COL-5928</span>
+</div>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-48 h-12 border-b-0 flex items-center justify-center">
+<span class="font-data-code text-[12px] italic text-secondary font-bold">Lic. Ruht Mateo V.</span>
+</div>
+<div class="w-48 border-t border-outline/40 pt-1">
+<span class="font-label-md block text-xs">Lic. Ruht Mateo</span>
+<span class="text-[10px] text-on-surface-variant block">Supervisora General • CLÍNICA ARIAS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl bg-on-surface text-surface shadow-lg" id="toastNotification">
+<span class="material-symbols-outlined text-secondary-container text-[20px]" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Acción completada con éxito.</span>
+</div>
+</div>
+<script>
+  // State management
+  let activeFilter = 'all';
+  let currentDischargeRecord = null;
+
+  // Search logic for active patients
+  function searchPatients(query) {
+    const q = query.toLowerCase().trim();
+    const rows = document.querySelectorAll('.patient-record');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const text = row.innerText.toLowerCase();
+      const matchesSearch = text.includes(q);
+      const matchesFilter = applyFilterRule(row, activeFilter);
+
+      if (matchesSearch && matchesFilter) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('activeCounterBadge').innerText = visibleCount + ' pacientes visibles';
+  }
+
+  // Quick filter tab handler
+  function setFilter(filterType, btnElement) {
+    activeFilter = filterType;
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.className = 'filter-btn px-4 py-2 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high font-label-md flex items-center gap-2 whitespace-nowrap transition-all';
+    });
+
+    if (btnElement) {
+      btnElement.className = 'filter-btn px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md flex items-center gap-2 whitespace-nowrap transition-all shadow-sm';
+    }
+
+    const rows = document.querySelectorAll('.patient-record');
+    let visibleCount = 0;
+
+    rows.forEach(row => {
+      const matches = applyFilterRule(row, filterType);
+      if (matches) {
+        row.style.display = '';
+        visibleCount++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+
+    document.getElementById('activeCounterBadge').innerText = visibleCount + ' pacientes visibles';
+  }
+
+  function applyFilterRule(row, filter) {
+    const dept = row.getAttribute('data-dept');
+    const isReady = row.getAttribute('data-ready') === 'true';
+
+    if (filter === 'all') return true;
+    if (filter === 'listo') return isReady;
+    if (filter === 'medicina') return dept === 'medicina';
+    if (filter === 'cirugia') return dept === 'cirugia';
+    if (filter === 'uci') return dept === 'uci';
+    return true;
+  }
+
+  // View Switcher (Table vs Bento Cards)
+  function switchView(mode) {
+    const tableWrap = document.getElementById('tableViewWrapper');
+    const cardsWrap = document.getElementById('cardsViewWrapper');
+    const tableBtn = document.getElementById('viewTableBtn');
+    const cardsBtn = document.getElementById('viewCardsBtn');
+
+    if (mode === 'cards') {
+      tableWrap.classList.add('hidden');
+      cardsWrap.classList.remove('hidden');
+      renderCardsView();
+      cardsBtn.className = 'p-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm';
+      tableBtn.className = 'p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface';
+    } else {
+      tableWrap.classList.remove('hidden');
+      cardsWrap.classList.add('hidden');
+      tableBtn.className = 'p-1.5 rounded-lg bg-surface-container-lowest text-primary shadow-sm';
+      cardsBtn.className = 'p-1.5 rounded-lg text-on-surface-variant hover:text-on-surface';
+    }
+  }
+
+  function renderCardsView() {
+    const cardsWrap = document.getElementById('cardsViewWrapper');
+    const rows = document.querySelectorAll('.patient-record');
+    cardsWrap.innerHTML = '';
+
+    rows.forEach(row => {
+      if (row.style.display === 'none') return;
+
+      const exp = row.getAttribute('data-exp');
+      const name = row.getAttribute('data-name');
+      const age = row.getAttribute('data-age');
+      const bed = row.getAttribute('data-bed');
+      const diag = row.getAttribute('data-diag');
+      const doctor = row.getAttribute('data-med');
+      const status = row.getAttribute('data-status');
+      const obs = row.getAttribute('data-obs');
+
+      const card = document.createElement('div');
+      card.className = 'bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow gap-3';
+      card.innerHTML = `
+        <div>
+          <div class="flex items-center justify-between">
+            <span class="font-data-code text-primary font-bold text-xs">${exp}</span>
+            <span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-[11px] font-bold">${bed}</span>
+          </div>
+          <h4 class="font-headline-sm text-on-surface mt-2 font-bold">${name}</h4>
+          <span class="text-on-surface-variant text-[12px] block">${age} años • ${status}</span>
+          
+          <div class="mt-3 p-2.5 rounded-xl bg-surface-container-low text-[12px]">
+            <strong class="text-on-surface block font-medium">Diagnóstico:</strong>
+            <p class="text-on-surface-variant line-clamp-2">${diag}</p>
+          </div>
+
+          <div class="mt-2 text-[11px] text-outline">
+            <span>Médico: <strong class="text-on-surface font-medium">${doctor}</strong></span>
+          </div>
+        </div>
+
+        <div class="pt-2 flex items-center justify-between border-t border-surface-container-high/40">
+          <span class="text-[11px] text-secondary font-semibold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Activo
+          </span>
+          <button type="button" onclick="openDischargeModal('${exp}')" class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm hover:opacity-90 transition-opacity">
+            <span class="material-symbols-outlined text-[16px]">output</span>
+            <span>DAR DE ALTA</span>
+          </button>
+        </div>
+      `;
+      cardsWrap.appendChild(card);
+    });
+  }
+
+  // Open Discharge Modal with preloaded dataset
+  function openDischargeModal(expId) {
+    const row = document.querySelector(`.patient-record[data-exp="${expId}"]`);
+    if (!row) return;
+
+    currentDischargeRecord = {
+      exp: expId,
+      name: row.getAttribute('data-name'),
+      age: row.getAttribute('data-age'),
+      gender: row.getAttribute('data-gender'),
+      bed: row.getAttribute('data-bed'),
+      diag: row.getAttribute('data-diag'),
+      med: row.getAttribute('data-med'),
+      obs: row.getAttribute('data-obs')
+    };
+
+    document.getElementById('modalPatientInitials').innerText = currentDischargeRecord.name.split(' ').map(n => n[0]).slice(0, 2).join('');
+    document.getElementById('modalPatientName').innerText = currentDischargeRecord.name;
+    document.getElementById('modalPatientExp').innerText = currentDischargeRecord.exp;
+    document.getElementById('modalPatientDemog').innerText = `${currentDischargeRecord.age} años • ${currentDischargeRecord.gender}`;
+    document.getElementById('modalPatientBed').innerText = currentDischargeRecord.bed;
+
+    // Fill form inputs
+    document.getElementById('modalDiagnosis').value = currentDischargeRecord.diag;
+    document.getElementById('modalPrescription').value = '1. Continuar antibioticoterapia vía oral según receta anexa.\n2. Analgesia en caso de escala EVA > 4.\n3. Reposo y curación de herida/control de signos vitales cada 12 horas.';
+    document.getElementById('modalObservations').value = currentDischargeRecord.obs || 'Paciente asintomático, signos vitales estables y deambulando sin asistencia.';
+
+    const modal = document.getElementById('dischargeModal');
+    modal.classList.remove('hidden');
+  }
+
+  function closeDischargeModal() {
+    document.getElementById('dischargeModal').classList.add('hidden');
+    currentDischargeRecord = null;
+  }
+
+  // Confirm Discharge Action: updates patient row and frees bed
+  function confirmDischargeAction(shouldPrint) {
+    if (!currentDischargeRecord) return;
+
+    const row = document.querySelector(`.patient-record[data-exp="${currentDischargeRecord.exp}"]`);
+    const targetExp = currentDischargeRecord.exp;
+    const targetName = currentDischargeRecord.name;
+    const targetDoctor = document.getElementById('modalDoctor').value;
+    const targetBed = currentDischargeRecord.bed;
+    const targetDiag = document.getElementById('modalDiagnosis').value;
+    const targetDate = document.getElementById('modalDate').value + ' ' + document.getElementById('modalTime').value;
+    const targetRx = document.getElementById('modalPrescription').value;
+    const nextCita = document.getElementById('modalFollowupDate').value + ' - ' + document.getElementById('modalFollowupTime').value;
+
+    // Add to Audit History Table
+    const auditBody = document.getElementById('auditHistoryTableBody');
+    const newAuditRow = document.createElement('tr');
+    newAuditRow.className = 'hover:bg-surface-container-low/50 transition-colors audit-row bg-secondary-container/10';
+    newAuditRow.setAttribute('data-search', `${targetExp} ${targetName} ${targetDoctor}`);
+    newAuditRow.innerHTML = `
+      <td class="py-3 px-4 whitespace-nowrap">
+        <span class="font-data-code text-on-surface font-bold">Hoy</span>
+        <span class="block text-[11px] text-secondary font-bold">Recién Egresado</span>
+      </td>
+      <td class="py-3 px-4 font-data-code font-bold text-primary">${targetExp}</td>
+      <td class="py-3 px-4">
+        <span class="font-label-md text-on-surface block font-semibold">${targetName}</span>
+        <span class="text-[11px] text-on-surface-variant">${currentDischargeRecord.age} años • ${currentDischargeRecord.gender}</span>
+      </td>
+      <td class="py-3 px-4">
+        <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[11px] font-bold">
+          <span class="material-symbols-outlined text-[12px]">cleaning_services</span> ${targetBed} (Liberada)
+        </span>
+      </td>
+      <td class="py-3 px-4 max-w-xs">
+        <p class="font-body-md text-on-surface text-[13px] truncate">${targetDiag}</p>
+      </td>
+      <td class="py-3 px-4 text-[12px]">
+        <span class="font-medium text-on-surface block">${targetDoctor}</span>
+        <span class="text-secondary text-[11px] font-semibold">Validado por Lic. Ruht Mateo</span>
+      </td>
+      <td class="py-3 px-4 whitespace-nowrap">
+        <span class="text-on-surface text-[12px] font-medium">${nextCita}</span>
+        <span class="block text-[10px] text-secondary">Control Ambulatorio</span>
+      </td>
+      <td class="py-3 px-4 text-right">
+        <button type="button" onclick="previewDischargeDocument('${targetExp}', '${targetName}', '${targetDiag}', '${targetDoctor}', '${nextCita}', '${targetRx.replace(/\n/g, ' ')}')" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary font-label-sm text-[12px] transition-colors">
+          <span class="material-symbols-outlined text-[14px]">description</span>
+          <span>Ver Acta</span>
+        </button>
+      </td>
+    `;
+    auditBody.insertBefore(newAuditRow, auditBody.firstChild);
+
+    // Remove or strike patient from active table
+    if (row) {
+      row.remove();
+    }
+
+    closeDischargeModal();
+
+    if (shouldPrint) {
+      previewDischargeDocument(targetExp, targetName, targetDiag, targetDoctor, nextCita, targetRx);
+    }
+
+    showToast(`Alta Médica procesada: Cama ${targetBed} liberada exitosamente.`);
+    // Re-render card view if active
+    if (!document.getElementById('cardsViewWrapper').classList.contains('hidden')) {
+      renderCardsView();
+    }
+  }
+
+  // Audit search filter
+  function filterAuditRecords(query) {
+    const q = query.toLowerCase().trim();
+    document.querySelectorAll('.audit-row').forEach(row => {
+      const searchData = (row.getAttribute('data-search') || '').toLowerCase();
+      if (searchData.includes(q)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Preview official document before/after print
+  function previewDischargeDocument(exp, patient, diag, doctor, nextDate, rx) {
+    document.getElementById('docExp').innerText = exp;
+    document.getElementById('docPatient').innerText = patient;
+    document.getElementById('docDiagText').innerText = diag;
+    document.getElementById('docDoctor').innerText = doctor;
+    document.getElementById('docSignDoctor').innerText = doctor;
+    document.getElementById('docNextAppointment').innerText = nextDate;
+    document.getElementById('docRxText').innerText = rx || 'Continuar indicaciones verbales dadas al familiar.';
+    document.getElementById('printDocumentModal').classList.remove('hidden');
+  }
+
+  function closePrintModal() {
+    document.getElementById('printDocumentModal').classList.add('hidden');
+  }
+
+  function openNewAdmissionModal() {
+    showToast("Módulo de Admisión Rápida: Redirigiendo a Triaje/Urgencias...");
+  }
+
+  function showToast(msg) {
+    const toast = document.getElementById('toastNotification');
+    document.getElementById('toastMessage').innerText = msg;
+    toast.classList.remove('translate-y-24', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-24', 'opacity-0');
+    }, 4000);
+  }
+</script></main></div></body></html>

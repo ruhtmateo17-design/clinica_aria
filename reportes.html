@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","on-surface-variant":"#40484c","on-secondary-container":"#00714e","error":"#ba1a1a","tertiary-container":"#005d73","on-background":"#0d1c2f","error-container":"#ffdad6","secondary":"#006c4a","surface-container":"#e6eeff","surface-dim":"#ccdbf4","on-primary-fixed":"#001f2a","on-tertiary":"#ffffff","secondary-container":"#82f5c1","on-surface":"#0d1c2f","surface":"#f8f9ff","surface-container-high":"#dde9ff","on-tertiary-fixed":"#001f28","inverse-primary":"#90cfec","surface-container-low":"#eff4ff","surface-tint":"#1e667f","on-error-container":"#93000a","surface-variant":"#d5e3fd","outline-variant":"#bfc8cd","primary-fixed":"#bde9ff","on-error":"#ffffff","primary-container":"#0d5c75","surface-bright":"#f8f9ff","background":"#f8f9ff","tertiary":"#004455","tertiary-fixed-dim":"#6cd3f7","surface-container-lowest":"#ffffff","on-primary-container":"#93d3ef","on-secondary":"#ffffff","primary-fixed-dim":"#90cfec","secondary-fixed":"#85f8c4","surface-container-highest":"#d5e3fd","on-secondary-fixed":"#002114","on-secondary-fixed-variant":"#005137","secondary-fixed-dim":"#68dba9","inverse-surface":"#233144","on-tertiary-fixed-variant":"#004e61","on-primary-fixed-variant":"#004d64","tertiary-fixed":"#b7eaff","inverse-on-surface":"#ebf1ff","on-tertiary-container":"#70d7fb","primary":"#004357","outline":"#70787d"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-lg":"1.25rem","space-sm":"0.5rem","margin-desktop":"2rem",margin:"1rem",gutter:"1rem","space-xs":"0.25rem","space-md":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"data-code":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"data-metric":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"data-code":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"data-metric":["24px",{lineHeight:"28px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-lg pb-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Logotipo Oficial Clínica Arias" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBzV5d-yvIdiq9viCwSHjvCfRuOm9I509lu1S0aAKW5SaUV2AeJZHPGKqFGDyYRAKqV4kxgf7GKh-_BxFX6fCq-gVRuELkWl1RLcLsewBosA2qOkbA4Hmm5RGVd_oETOVJwO6K-dONQU8zi-P22-qeRQqp2JtizGPDnMZgPnBlE7zxn64d3YaznArZRKlmmWHL4izo5afXZMkyqVfhEOw96bot3SgWB6aGcoyTF9iw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-tight">CLÍNICA ARIAS</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestión Clínica Integral</span></div></div><div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-data-code text-data-code text-on-surface-variant font-medium">PostgreSQL • Operacional</span></div><span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span></div></div><div class="px-space-md py-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm"><div class="relative"><img alt="Avatar Lic. Ruht Mateo" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6HB4pi2PuC4E7lvyXbZV3Wt5tdrNHwBS8N70jcJn8jl9K3R4cgP2obpZYy2n-Pm2SoDzGKza3vGdCHf-I4dHp4ZpRZ91LJhIn8aylTlLUhT9B81h4Q8DW-Inuol0JNVZK-QAZN78uDQq5YB5PlMsGkQ-eCIm5r5l0BY9ILM4QbEZSdcV7pw2_BviMbhgPIBwdpc913z3IF48Uc9WY11Mbl_wBGjhxtNdKINe70g"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between gap-space-xs"><span class="font-label-md text-label-md text-on-surface truncate">Lic. Ruht Mateo</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Supervisora General</span><span class="inline-flex items-center w-fit mt-space-xs px-1.5 py-0.5 rounded-full bg-primary-container font-label-sm text-[10px] leading-none text-on-primary font-bold tracking-wide">ADMINISTRADORA</span></div></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="panel-principal" href="panel.html"><span class="font-label-md text-label-md">Panel Principal</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">KPI</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="control-de-enfermeria" href="enfermeria.html"><span class="font-label-md text-label-md">Control de Enfermería</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">8 Act.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="registro-de-emergencias" href="emergencias.html"><span class="font-label-md text-label-md">Registro Emergencias</span><span class="font-label-sm text-label-sm bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded-full">3 Triaje</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pacientes-ingresados-y-altas" href="pacientes.html"><span class="font-label-md text-label-md">Pacientes &amp; Altas</span><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">24 Camas</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="laboratorio-clinico" href="laboratorio.html"><span class="font-label-md text-label-md">Laboratorio Clínico</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">12 Pend.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="area-de-caja-y-finanzas" href="caja.html"><span class="font-label-md text-label-md">Caja &amp; Finanzas</span><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">Abierta</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reportes-y-auditoria" href="reportes.html"><span class="font-label-md text-label-md">Reportes &amp; Auditoría</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracion-y-usuarios" href="login.html"><span class="font-label-md text-label-md">Configuración &amp; Roles</span></a></nav></div><div class="p-space-md bg-surface-container-lowest border-t-0"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary">security</span><span class="font-body-sm text-body-sm text-on-surface font-medium">Sesión Cifrada SSL</span></div><a class="flex items-center justify-center p-1 rounded-lg text-outline hover:text-error hover:bg-error-container transition-colors" data-path="login" href="login.html" title="Cerrar Sesión"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span><span class="font-body-sm text-body-sm font-medium">Lunes, 24 de Octubre - 09:42 AM</span></div><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder-outline font-body-sm text-body-sm border-0 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar por Cédula, N° de Expediente o Nombre..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-label-sm text-label-sm font-semibold">Turno Mañana • Sede Principal</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Emergencia</span></button><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Cobro</span></button></div><div class="flex items-center gap-1"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Alertas Críticas" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Mensajería Interna" type="button"><span class="material-symbols-outlined text-[20px]">forum</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1720px] mx-auto w-full space-y-space-lg">
+<!-- Header Block -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm font-semibold">Lic. Ruht Mateo • Supervisión &amp; Control de Calidad</span>
+</div>
+<span class="font-data-code text-data-code text-outline">AUDIT-PROT-2024-Q4</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-data-code text-[11px] font-semibold">Cifrado SHA-256 Activo</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
+          Centro de Inteligencia Clínica &amp; Reportes Oficiales
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+          Consolidación de trazabilidad operacional, auditoría forense de registros asistenciales, balances financieros y certificaciones analíticas para la Dirección Médica.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm self-start xl:self-center">
+<!-- Date quick toggle -->
+<div class="inline-flex p-1 rounded-xl bg-surface-container-low" id="dateQuickGroup">
+<button class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm" data-range="hoy" type="button">Hoy</button>
+<button class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-range="semana" type="button">Semana</button>
+<button class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-range="mes" type="button">Mes</button>
+<button class="px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface" data-range="custom" type="button">Personalizado</button>
+</div>
+<!-- Master Action Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all font-label-md text-label-md shadow-sm" onclick="triggerReportGeneration()" type="button">
+<span class="material-symbols-outlined text-[18px]">summarize</span>
+<span>Generar Consolidado</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors font-label-sm text-label-sm" onclick="exportData('pdf')" title="Exportar Selección a Formato PDF Vectorial" type="button">
+<span class="material-symbols-outlined text-[18px] text-error">picture_as_pdf</span>
+<span>PDF</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-on-surface transition-colors font-label-sm text-label-sm" onclick="exportData('xlsx')" title="Descargar Libro XLSX con Tablas Dinámicas" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">table_view</span>
+<span>Excel</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Executive KPI Bar -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Eventos Auditados</span>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-primary">14,289</span>
+<span class="font-data-code text-[11px] text-secondary font-semibold">+6.4%</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ciclo mensual activo</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Cumplimiento SLA Clínico</span>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-secondary">99.2%</span>
+<span class="font-data-code text-[11px] text-secondary font-semibold">Triage &lt; 7m</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sin quiebre de estándares</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-secondary-container/50 flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[24px]">timer</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Arqueo Validado en Caja</span>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-on-surface">$18,450.00</span>
+<span class="font-data-code text-[11px] text-primary font-semibold">100% Cuadrado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Último turno: M. Peña</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Firmas Digitales Médicas</span>
+<div class="flex items-baseline gap-2">
+<span class="font-data-metric text-data-metric text-on-surface">318 / 320</span>
+<span class="font-data-code text-[11px] text-error font-semibold">2 Pend.</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Certificación PKI 2048-bit</span>
+</div>
+<div class="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">draw</span>
+</div>
+</div>
+</div>
+<!-- Advanced Multifactor Filter Panel -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary">
+<span class="material-symbols-outlined text-[20px]">filter_alt</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Filtros Avanzados y Criterios Multifactor</span>
+</div>
+<button class="text-outline hover:text-primary transition-colors font-label-sm text-label-sm flex items-center gap-1" onclick="resetFilters()" type="button">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+<span>Restablecer Filtros</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Module Selector -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-outline font-medium block">Departamento / Módulo</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-primary" id="filterDept">
+<option value="todos">Todos los Departamentos</option>
+<option value="enfermeria">Enfermería y Asistencia</option>
+<option value="emergencias">Emergencias y Triaje</option>
+<option value="hospitalizacion">Hospitalización y Altas</option>
+<option value="laboratorio">Laboratorio Clínico</option>
+<option value="caja">Caja &amp; Finanzas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Date Range: From / To -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-outline font-medium block">Rango: Fecha Desde / Hasta</label>
+<div class="grid grid-cols-2 gap-1.5">
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary text-[12px]" type="date" value="2024-10-01"/>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg px-2 py-1.5 focus:outline-none focus:ring-1 focus:ring-primary text-[12px]" type="date" value="2024-10-24"/>
+</div>
+</div>
+<!-- Staff / Responsible -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-outline font-medium block">Personal / Responsable</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-primary" id="filterStaff">
+<option value="todos">Cualquier Profesional</option>
+<option selected="" value="rmateo">Lic. Ruht Mateo (Supervisora)</option>
+<option value="jparedes">Dra. Jimena Paredes (Urgencióloga)</option>
+<option value="fcastillo">Dr. Fernando Castillo (Med. Interna)</option>
+<option value="mpena">Cajero Manuel Peña (Caja Central)</option>
+<option value="pgomez">Lic. Patricia Gómez (Laboratorio)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">person</span>
+</div>
+</div>
+<!-- Patient or Transaction Search -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-outline font-medium block">Cédula / Expediente / ID Transac.</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg py-2 pl-9 pr-3 placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Ej. EXP-09412 o V-18.490..." type="text"/>
+</div>
+</div>
+<!-- Status -->
+<div class="space-y-1">
+<label class="font-label-sm text-label-sm text-outline font-medium block">Estado de Auditoría</label>
+<div class="relative">
+<select class="w-full bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-lg py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-1 focus:ring-primary" id="filterStatus">
+<option value="todos">Todos los Estados</option>
+<option value="validados">Validados &amp; Sellados</option>
+<option value="pendientes">Pendientes de Firma</option>
+<option value="observados">En Observación / Auditoría</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">shield</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Report Catalog (6 Pillars) -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Catálogo Oficial de Informes Disponibles</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Generación directa certificada con protocolo criptográfico de entrega para Auditoría Externa y COFEPRIS / Contraloría Hospitalaria.</p>
+</div>
+<span class="font-label-sm text-label-sm text-outline">6 Informes Estandarizados</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Card 1: Nursing -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">vital_signs</span>
+</div>
+<span class="font-data-code text-[11px] px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold">INF-ENF-01</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Asistencia &amp; Turnos de Enfermería</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Trazabilidad horaria, rotación de camas por enfermera, sustituciones de emergencia, cálculo de ratios paciente/asistencial y registro de kardex farmacológico.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2 text-[12px] font-data-code text-outline">
+<span>Frecuencia: Diario</span>
+<span>•</span>
+<span>Último: Hoy 07:00</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acción Rápida</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Enfermería', 'PDF')" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">picture_as_pdf</span> PDF
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Enfermería', 'XLSX')" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">table_view</span> Excel
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Emergency & Triage -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-error-container/60 flex items-center justify-center text-error group-hover:bg-error group-hover:text-on-error transition-colors">
+<span class="material-symbols-outlined text-[22px]">e911_emergency</span>
+</div>
+<span class="font-data-code text-[11px] px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold">INF-EMG-02</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Emergencias &amp; Triaje Manchester</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Tiempos de puerta a médico (Door-to-Doctor), distribución por código de color (Rojo/Naranja/Amarillo/Verde), derivaciones y reingresos a 72 horas.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2 text-[12px] font-data-code text-outline">
+<span>SLA Meta: 98.5%</span>
+<span>•</span>
+<span>Casos Triaje: 42 hoy</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acción Rápida</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Emergencias', 'PDF')" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">picture_as_pdf</span> PDF
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Emergencias', 'XLSX')" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">table_view</span> Excel
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Inpatient Bed Occupancy & Discharge -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/60 flex items-center justify-center text-on-secondary-container group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[22px]">single_bed</span>
+</div>
+<span class="font-data-code text-[11px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">INF-HSP-03</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Ocupación de Camas &amp; Altas Médicas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Tasa de ocupación censal, promedio de estancia hospitalaria (ALOS), índice de rotación de camas, altas voluntarias y altas por mejoría clínica.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2 text-[12px] font-data-code text-outline">
+<span>Capacidad: 24 Camas</span>
+<span>•</span>
+<span>Estancia: 3.4 días</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acción Rápida</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Hospitalización', 'PDF')" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">picture_as_pdf</span> PDF
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Hospitalización', 'XLSX')" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">table_view</span> Excel
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Clinical Laboratory & STAT -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">science</span>
+</div>
+<span class="font-data-code text-[11px] px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-semibold">INF-LAB-04</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Productividad &amp; Pruebas STAT Laboratorio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Turnaround Time (TAT) por analizador, panel de valores críticos notificados de inmediato al médico tratante, hemocultivos y reactivos consumidos.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2 text-[12px] font-data-code text-outline">
+<span>TAT STAT: 26 min</span>
+<span>•</span>
+<span>Validado: Lic. Gómez</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acción Rápida</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Laboratorio', 'PDF')" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">picture_as_pdf</span> PDF
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Laboratorio', 'XLSX')" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">table_view</span> Excel
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 5: Finance & Cash Flow -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/40 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<span class="font-data-code text-[11px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">INF-CAJ-05</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Ingresos, Egresos &amp; Cierres de Caja</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Libro de recaudación por turnos matutino/vespertino, conciliación por método de pago (Efectivo, Tarjetas, Seguros HCM, Transferencias) y balance neto.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2 text-[12px] font-data-code text-outline">
+<span>Auditoría: Diaria</span>
+<span>•</span>
+<span>Arqueo Físico OK</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acción Rápida</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Caja', 'PDF')" type="button">
+<span class="material-symbols-outlined text-[15px] text-error">picture_as_pdf</span> PDF
+              </button>
+<button class="px-2.5 py-1 rounded bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Caja', 'XLSX')" type="button">
+<span class="material-symbols-outlined text-[15px] text-secondary">table_view</span> Excel
+              </button>
+</div>
+</div>
+</div>
+<!-- Card 6: Operations & Executive Master Report -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between group">
+<div class="space-y-space-sm">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[22px]">corporate_fare</span>
+</div>
+<span class="font-data-code text-[11px] px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-bold">INF-GER-06 • MASTER</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Operaciones Generales Clínica Arias</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Dossier gerencial consolidado para Supervisora General y Consejo Directivo: correlación asistencial, margen operativo, consumo de insumos y auditoría de eventos adversos.
+              </p>
+</div>
+<div class="flex items-center gap-space-sm pt-2 text-[12px] font-data-code text-primary font-semibold">
+<span>Auditoría de Calidad: Lic. R. Mateo</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/60 -mx-space-md -mb-space-md p-space-sm px-space-md rounded-b-xl">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Acción Rápida</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-2.5 py-1 rounded bg-primary-container hover:bg-primary text-on-primary font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Operaciones Master', 'PDF')" type="button">
+<span class="material-symbols-outlined text-[15px]">picture_as_pdf</span> PDF Completo
+              </button>
+<button class="px-2.5 py-1 rounded bg-secondary hover:opacity-90 text-on-secondary font-label-sm text-[12px] flex items-center gap-1 transition-colors" onclick="quickReport('Operaciones Master', 'XLSX')" type="button">
+<span class="material-symbols-outlined text-[15px]">table_view</span> Excel
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Preview & General Audit Log Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden space-y-0">
+<div class="p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-lowest">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Registro Oficial de Informes Generados y Trazabilidad Forense</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Historial inmutable de reportes emitidos con firma digital y marca de agua institucional</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-data-code text-data-code text-on-surface-variant">Mostrando <strong class="text-on-surface">6</strong> de <strong class="text-on-surface">148</strong> informes archivados</span>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface" title="Actualizar Tabla" type="button">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+</button>
+</div>
+</div>
+<!-- High Density Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-outline font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-space-md font-semibold">ID / Código</th>
+<th class="py-2.5 px-space-md font-semibold">Tipo de Reporte</th>
+<th class="py-2.5 px-space-md font-semibold">Departamento</th>
+<th class="py-2.5 px-space-md font-semibold">Rango / Emisión</th>
+<th class="py-2.5 px-space-md font-semibold text-right">Registros</th>
+<th class="py-2.5 px-space-md font-semibold">Responsable</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Fmt</th>
+<th class="py-2.5 px-space-md font-semibold">Firma Digital SHA-256</th>
+<th class="py-2.5 px-space-md font-semibold text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-2.5 px-space-md font-data-code text-data-code font-semibold text-primary">REP-2024-1024-001</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Cierre General Turno Mañana</div>
+<div class="text-[11px] text-on-surface-variant font-data-code">Arqueo integrado Caja &amp; Altas</div>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Caja &amp; Finanzas
+                </span>
+</td>
+<td class="py-2.5 px-space-md font-data-code text-[12px] text-on-surface-variant">
+                Hoy • 06:00 - 14:00
+              </td>
+<td class="py-2.5 px-space-md text-right font-data-code text-data-code font-medium">84 trans.</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md text-on-surface">Manuel Peña</div>
+<div class="text-[11px] text-outline">Cajero Operativo</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">XLSX</span>
+</td>
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-data-code text-[11px] font-medium truncate max-w-[130px]" title="0x9f88a2e1d74bfa03">0x9f88a...fa03</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="previewModal('REP-2024-1024-001', 'Cierre General Turno Mañana')" title="Previsualizar" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" onclick="toastDownload('PDF', 'REP-2024-1024-001')" title="Descargar PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="toastDownload('Excel', 'REP-2024-1024-001')" title="Descargar Excel" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-colors" onclick="window.print()" title="Imprimir Boleta Oficial" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-2.5 px-space-md font-data-code text-data-code font-semibold text-primary">REP-2024-1024-002</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Auditoría Triage y Tiempos de Respuesta</div>
+<div class="text-[11px] text-on-surface-variant font-data-code">Control de desvíos y Manchester</div>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Emergencias
+                </span>
+</td>
+<td class="py-2.5 px-space-md font-data-code text-[12px] text-on-surface-variant">
+                Hoy • 00:00 - 08:00
+              </td>
+<td class="py-2.5 px-space-md text-right font-data-code text-data-code font-medium">32 pac.</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md text-on-surface">Dra. Jimena Paredes</div>
+<div class="text-[11px] text-outline">Jefa Guardia Urgencias</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">PDF</span>
+</td>
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-data-code text-[11px] font-medium truncate max-w-[130px]" title="0x4b12c884ee9010aa">0x4b12c...10aa</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="previewModal('REP-2024-1024-002', 'Auditoría Triage')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" onclick="toastDownload('PDF', 'REP-2024-1024-002')" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="toastDownload('Excel', 'REP-2024-1024-002')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-2.5 px-space-md font-data-code text-data-code font-semibold text-primary">REP-2024-1023-088</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Censo Diario &amp; Rotación de Camas</div>
+<div class="text-[11px] text-on-surface-variant font-data-code">Pabellón Central y Aislamiento</div>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                  Hospitalización
+                </span>
+</td>
+<td class="py-2.5 px-space-md font-data-code text-[12px] text-on-surface-variant">
+                23 Oct • Consolidado 24h
+              </td>
+<td class="py-2.5 px-space-md text-right font-data-code text-data-code font-medium">24 camas</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md text-on-surface">Lic. Ruht Mateo</div>
+<div class="text-[11px] text-outline">Supervisora General</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">PDF/XLS</span>
+</td>
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-data-code text-[11px] font-medium truncate max-w-[130px]" title="0x77ee92a101cdb89">0x77ee9...db89</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="previewModal('REP-2024-1023-088', 'Censo Diario Camas')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" onclick="toastDownload('PDF', 'REP-2024-1023-088')" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="toastDownload('Excel', 'REP-2024-1023-088')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-2.5 px-space-md font-data-code text-data-code font-semibold text-primary">REP-2024-1023-087</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Panel de Analitos STAT y Alertas Críticas</div>
+<div class="text-[11px] text-on-surface-variant font-data-code">Gases arteriales, Troponinas, Dímero D</div>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Laboratorio
+                </span>
+</td>
+<td class="py-2.5 px-space-md font-data-code text-[12px] text-on-surface-variant">
+                23 Oct • 14:00 - 22:00
+              </td>
+<td class="py-2.5 px-space-md text-right font-data-code text-data-code font-medium">116 an.</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md text-on-surface">Lic. Patricia Gómez</div>
+<div class="text-[11px] text-outline">Especialista Bioanálisis</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">PDF</span>
+</td>
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-data-code text-[11px] font-medium truncate max-w-[130px]" title="0x0182fcb023948e">0x0182f...948e</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="previewModal('REP-2024-1023-087', 'Analitos STAT')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" onclick="toastDownload('PDF', 'REP-2024-1023-087')" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="toastDownload('Excel', 'REP-2024-1023-087')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-2.5 px-space-md font-data-code text-data-code font-semibold text-primary">REP-2024-1022-045</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Kardex de Asistencia &amp; Sustituciones</div>
+<div class="text-[11px] text-on-surface-variant font-data-code">Control de personal de enfermería</div>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                  Enfermería
+                </span>
+</td>
+<td class="py-2.5 px-space-md font-data-code text-[12px] text-on-surface-variant">
+                22 Oct • Turno Nocturno
+              </td>
+<td class="py-2.5 px-space-md text-right font-data-code text-data-code font-medium">18 enfer.</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md text-on-surface">Lic. Ruht Mateo</div>
+<div class="text-[11px] text-outline">Supervisora General</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">XLSX</span>
+</td>
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-data-code text-[11px] font-medium truncate max-w-[130px]" title="0xac349910d8efbb1">0xac349...fbb1</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="previewModal('REP-2024-1022-045', 'Kardex Asistencia')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" onclick="toastDownload('PDF', 'REP-2024-1022-045')" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="toastDownload('Excel', 'REP-2024-1022-045')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-2.5 px-space-md font-data-code text-data-code font-semibold text-primary">REP-2024-1021-012</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Consolidado Gerencial de Operaciones</div>
+<div class="text-[11px] text-on-surface-variant font-data-code">Informe quincenal integral con KPI clínico</div>
+</td>
+<td class="py-2.5 px-space-md">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[11px] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-on-primary"></span>
+                  Dirección
+                </span>
+</td>
+<td class="py-2.5 px-space-md font-data-code text-[12px] text-on-surface-variant">
+                01 Oct - 15 Oct 2024
+              </td>
+<td class="py-2.5 px-space-md text-right font-data-code text-data-code font-medium">1,420 ev.</td>
+<td class="py-2.5 px-space-md">
+<div class="font-label-md text-label-md text-on-surface">Dr. Fernando Castillo</div>
+<div class="text-[11px] text-outline">Dirección Médica Adjunta</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">PDF/XLS</span>
+</td>
+<td class="py-2.5 px-space-md">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-data-code text-[11px] font-medium truncate max-w-[130px]" title="0xef710034ba89c02">0xef710...9c02</span>
+</div>
+</td>
+<td class="py-2.5 px-space-md text-center">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors" onclick="previewModal('REP-2024-1021-012', 'Consolidado Gerencial')" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-error transition-colors" onclick="toastDownload('PDF', 'REP-2024-1021-012')" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant hover:text-secondary transition-colors" onclick="toastDownload('Excel', 'REP-2024-1021-012')" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-high text-on-surface-variant transition-colors" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-body-sm text-on-surface-variant">
+<span>Registros por página:</span>
+<select class="bg-surface-container-lowest text-on-surface font-body-sm text-body-sm rounded px-2 py-1">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+</select>
+<span class="text-outline">1 - 6 de 148 informes</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded bg-surface-container-lowest text-outline hover:text-on-surface disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container-lowest text-outline hover:text-on-surface disabled:opacity-40" disabled="" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="px-3 py-1 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold">1</span>
+<button class="px-3 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">2</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">3</button>
+<span class="text-outline px-1">...</span>
+<button class="px-3 py-1 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">15</button>
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Executive Summary & Cryptographic Traceability Footer Panel -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Visual Analytics & Progress -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm lg:col-span-1">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Distribución por Especialidad</h3>
+<span class="material-symbols-outlined text-outline text-[20px]">pie_chart</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Volumen de solicitudes analíticas y auditorías en el período seleccionado.</p>
+<!-- SVG Spark / Distribution Bar -->
+<div class="pt-2 space-y-2.5">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Enfermería &amp; Administración Farmacológica</span>
+<span class="font-data-code font-bold text-primary">38%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-primary-container rounded-full" style="width: 38%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Emergencias &amp; Triaje Médico</span>
+<span class="font-data-code font-bold text-error">24%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 24%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Caja, Cobranza &amp; Liquidaciones</span>
+<span class="font-data-code font-bold text-secondary">20%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 20%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface">Laboratorio &amp; Pruebas Bioquímicas</span>
+<span class="font-data-code font-bold text-tertiary">18%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-low overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 18%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Digital Signature Certificate Details -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm lg:col-span-2 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[20px]">security</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Certificación de Integridad &amp; Sello Criptográfico SHA-256</h3>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">Válido &amp; Verificado</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+            Todos los reportes emanados por la plataforma CLÍNICA ARIAS cuentan con una firma digital institucional conforme a la normativa de expediente clínico electrónico (NOM-004-SSA3 / HIPAA Compliant). Cada exportación genera un hash inalterable registrado en PostgreSQL.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mt-space-md p-space-sm bg-surface-container-low rounded-xl">
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline block">Autoridad Certificadora</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">CA-CLINICA-ARIAS-ROOT-2024</span>
+<span class="font-data-code text-[11px] text-on-surface-variant block">RSA 4096-bit</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline block">Último Hash del Sistema</span>
+<span class="font-data-code text-[11px] text-primary font-bold break-all block">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span>
+</div>
+<div class="space-y-0.5">
+<span class="font-label-sm text-label-sm text-outline block">Custodio Operacional</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Lic. Ruht Mateo</span>
+<span class="font-data-code text-[11px] text-secondary font-medium block">Supervisor Token ID: #RM-9941</span>
+</div>
+</div>
+</div>
+<div class="pt-space-md flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-data-code text-data-code">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Auditoría Forense en Tiempo Real • Sede Central Clínica Arias</span>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1" onclick="verifyHashModal()" type="button">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+<span>Verificar Validez de Hash</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Preview Report -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-4" id="previewModalEl">
+<div class="bg-surface-container-lowest rounded-xl max-w-2xl w-full p-space-lg shadow-xl space-y-space-md animate-in fade-in duration-200">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">description</span>
+<div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface" id="modalTitle">Vista Previa de Reporte</h3>
+<span class="font-data-code text-data-code text-outline" id="modalCode">ID: REP-2024-1024-001</span>
+</div>
+</div>
+<button class="p-1 rounded-lg hover:bg-surface-container text-outline hover:text-on-surface" onclick="closePreviewModal()" type="button">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm text-body-sm text-on-surface">
+<div class="flex justify-between items-center pb-2">
+<span class="font-label-sm text-label-sm text-outline uppercase">Entidad Emisora</span>
+<span class="font-label-md text-label-md font-bold text-primary">CLÍNICA ARIAS • SEDE PRINCIPAL</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-[12px]">
+<div><strong class="text-on-surface-variant">Supervisora a Cargo:</strong> Lic. Ruht Mateo</div>
+<div><strong class="text-on-surface-variant">Estado del Registro:</strong> Sellado &amp; Cifrado</div>
+<div><strong class="text-on-surface-variant">Base de Datos:</strong> PostgreSQL Cluster #01</div>
+<div><strong class="text-on-surface-variant">Protocolo de Salida:</strong> PDF/A-3 ISO 19005-3</div>
+</div>
+<div class="p-space-sm bg-surface-container-lowest rounded-lg font-data-code text-[11px] text-on-surface-variant space-y-1">
+<div>=== RESUMEN SINTÉTICO DE AUDITORÍA ===</div>
+<div>• Cobertura de turno: 100% de personal registrado sin ausentismo crítico.</div>
+<div>• Cierre de fondos conciliado al centavo sin discrepancias de caja.</div>
+<div>• Tiempos de triaje promedio: 6 minutos 14 segundos (Meta Manchester lograda).</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-4 py-2 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors" onclick="closePreviewModal()" type="button">
+          Cerrar
+        </button>
+<button class="px-4 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md hover:bg-primary transition-colors flex items-center gap-1.5" onclick="confirmDownloadFromModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar Archivo Oficial</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-xl shadow-lg flex items-center gap-3 transition-opacity duration-300 opacity-0 pointer-events-none" id="toastNotification">
+<span class="material-symbols-outlined text-secondary-container" id="toastIcon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toastMsg">Acción procesada exitosamente.</span>
+</div>
+<script>
+    // Tab switching for date shortcuts
+    const dateButtons = document.querySelectorAll('#dateQuickGroup button');
+    dateButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dateButtons.forEach(b => {
+          b.className = 'px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+        });
+        btn.className = 'px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-semibold transition-all bg-primary-container text-on-primary shadow-sm';
+        showToast('Filtro temporal cambiado a: ' + btn.innerText);
+      });
+    });
+
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toastNotification');
+      const msg = document.getElementById('toastMsg');
+      const icn = document.getElementById('toastIcon');
+      msg.textContent = message;
+      icn.textContent = icon;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 3200);
+    }
+
+    function triggerReportGeneration() {
+      showToast('Generando Consolidado Oficial... Firma SHA-256 aplicada.', 'auto_mode');
+    }
+
+    function exportData(format) {
+      showToast('Exportando reporte general a formato .' + format.toUpperCase(), 'download_for_offline');
+    }
+
+    function quickReport(reportType, format) {
+      showToast('Generando ' + reportType + ' en ' + format + ' con sello de Lic. Ruht Mateo...', 'verified');
+    }
+
+    function resetFilters() {
+      document.getElementById('filterDept').selectedIndex = 0;
+      document.getElementById('filterStaff').selectedIndex = 0;
+      document.getElementById('filterStatus').selectedIndex = 0;
+      showToast('Filtros avanzados restablecidos al estado predeterminado.');
+    }
+
+    function previewModal(id, title) {
+      const modal = document.getElementById('previewModalEl');
+      document.getElementById('modalCode').textContent = 'ID: ' + id;
+      document.getElementById('modalTitle').textContent = title;
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closePreviewModal() {
+      const modal = document.getElementById('previewModalEl');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function confirmDownloadFromModal() {
+      closePreviewModal();
+      showToast('Descargando archivo certificado...', 'download_done');
+    }
+
+    function toastDownload(format, id) {
+      showToast('Descarga iniciada para ' + id + ' (' + format + ')', 'file_download');
+    }
+
+    function verifyHashModal() {
+      showToast('Hash de cadena validado correctamente en PostgreSQL: 0 discrepancias detectadas.', 'enhanced_encryption');
+    }
+  </script>
+</div></main></div></body></html>

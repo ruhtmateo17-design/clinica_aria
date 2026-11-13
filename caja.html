@@ -1,0 +1,868 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-primary":"#ffffff","on-surface-variant":"#40484c","on-secondary-container":"#00714e","error":"#ba1a1a","tertiary-container":"#005d73","on-background":"#0d1c2f","error-container":"#ffdad6","secondary":"#006c4a","surface-container":"#e6eeff","surface-dim":"#ccdbf4","on-primary-fixed":"#001f2a","on-tertiary":"#ffffff","secondary-container":"#82f5c1","on-surface":"#0d1c2f","surface":"#f8f9ff","surface-container-high":"#dde9ff","on-tertiary-fixed":"#001f28","inverse-primary":"#90cfec","surface-container-low":"#eff4ff","surface-tint":"#1e667f","on-error-container":"#93000a","surface-variant":"#d5e3fd","outline-variant":"#bfc8cd","primary-fixed":"#bde9ff","on-error":"#ffffff","primary-container":"#0d5c75","surface-bright":"#f8f9ff","background":"#f8f9ff","tertiary":"#004455","tertiary-fixed-dim":"#6cd3f7","surface-container-lowest":"#ffffff","on-primary-container":"#93d3ef","on-secondary":"#ffffff","primary-fixed-dim":"#90cfec","secondary-fixed":"#85f8c4","surface-container-highest":"#d5e3fd","on-secondary-fixed":"#002114","on-secondary-fixed-variant":"#005137","secondary-fixed-dim":"#68dba9","inverse-surface":"#233144","on-tertiary-fixed-variant":"#004e61","on-primary-fixed-variant":"#004d64","tertiary-fixed":"#b7eaff","inverse-on-surface":"#ebf1ff","on-tertiary-container":"#70d7fb","primary":"#004357","outline":"#70787d"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"2rem","gutter-desktop":"1.5rem","space-lg":"1.25rem","space-sm":"0.5rem","margin-desktop":"2rem",margin:"1rem",gutter:"1rem","space-xs":"0.25rem","space-md":"0.75rem"},fontFamily:{"headline-xl-mobile":["Plus Jakarta Sans"],"label-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"data-code":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Inter"],"label-lg":["Inter"],"data-metric":["Plus Jakarta Sans"],"body-sm":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"]},fontSize:{"headline-xl-mobile":["28px",{lineHeight:"36px",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-xl":["36px",{lineHeight:"44px",fontWeight:"700"}],"data-code":["12px",{lineHeight:"16px",fontWeight:"500"}],"headline-lg-mobile":["22px",{lineHeight:"30px",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"label-lg":["14px",{lineHeight:"20px",fontWeight:"600"}],"data-metric":["24px",{lineHeight:"28px",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"16px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",fontWeight:"600"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="flex flex-col"><div class="p-space-lg pb-space-sm bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Logotipo Oficial Clínica Arias" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBzV5d-yvIdiq9viCwSHjvCfRuOm9I509lu1S0aAKW5SaUV2AeJZHPGKqFGDyYRAKqV4kxgf7GKh-_BxFX6fCq-gVRuELkWl1RLcLsewBosA2qOkbA4Hmm5RGVd_oETOVJwO6K-dONQU8zi-P22-qeRQqp2JtizGPDnMZgPnBlE7zxn64d3YaznArZRKlmmWHL4izo5afXZMkyqVfhEOw96bot3SgWB6aGcoyTF9iw"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-tight">CLÍNICA ARIAS</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Gestión Clínica Integral</span></div></div><div class="mt-space-md p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-data-code text-data-code text-on-surface-variant font-medium">PostgreSQL • Operacional</span></div><span class="material-symbols-outlined text-[14px] text-secondary">cloud_done</span></div></div><div class="px-space-md py-space-xs"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm"><div class="relative"><img alt="Avatar Lic. Ruht Mateo" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6HB4pi2PuC4E7lvyXbZV3Wt5tdrNHwBS8N70jcJn8jl9K3R4cgP2obpZYy2n-Pm2SoDzGKza3vGdCHf-I4dHp4ZpRZ91LJhIn8aylTlLUhT9B81h4Q8DW-Inuol0JNVZK-QAZN78uDQq5YB5PlMsGkQ-eCIm5r5l0BY9ILM4QbEZSdcV7pw2_BviMbhgPIBwdpc913z3IF48Uc9WY11Mbl_wBGjhxtNdKINe70g"><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between gap-space-xs"><span class="font-label-md text-label-md text-on-surface truncate">Lic. Ruht Mateo</span></div><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Supervisora General</span><span class="inline-flex items-center w-fit mt-space-xs px-1.5 py-0.5 rounded-full bg-primary-container font-label-sm text-[10px] leading-none text-on-primary font-bold tracking-wide">ADMINISTRADORA</span></div></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-xl shadow-sm"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="panel-principal" href="panel.html"><span class="font-label-md text-label-md">Panel Principal</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">KPI</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="control-de-enfermeria" href="enfermeria.html"><span class="font-label-md text-label-md">Control de Enfermería</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">8 Act.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="registro-de-emergencias" href="emergencias.html"><span class="font-label-md text-label-md">Registro Emergencias</span><span class="font-label-sm text-label-sm bg-error-container text-on-error-container font-bold px-1.5 py-0.5 rounded-full">3 Triaje</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="pacientes-ingresados-y-altas" href="pacientes.html"><span class="font-label-md text-label-md">Pacientes &amp; Altas</span><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">24 Camas</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="laboratorio-clinico" href="laboratorio.html"><span class="font-label-md text-label-md">Laboratorio Clínico</span><span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-1.5 py-0.5 rounded-full">12 Pend.</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="area-de-caja-y-finanzas" href="caja.html"><span class="font-label-md text-label-md">Caja &amp; Finanzas</span><span class="font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">Abierta</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="reportes-y-auditoria" href="reportes.html"><span class="font-label-md text-label-md">Reportes &amp; Auditoría</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracion-y-usuarios" href="login.html"><span class="font-label-md text-label-md">Configuración &amp; Roles</span></a></nav></div><div class="p-space-md bg-surface-container-lowest border-t-0"><div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary">security</span><span class="font-body-sm text-body-sm text-on-surface font-medium">Sesión Cifrada SSL</span></div><a class="flex items-center justify-center p-1 rounded-lg text-outline hover:text-error hover:bg-error-container transition-colors" data-path="login" href="login.html" title="Cerrar Sesión"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40"><div class="h-16 w-full px-gutter-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-1"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span><span class="font-body-sm text-body-sm font-medium">Lunes, 24 de Octubre - 09:42 AM</span></div><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span><input class="w-full pl-9 pr-4 py-1.5 rounded-lg bg-surface-container-low text-on-surface placeholder-outline font-body-sm text-body-sm border-0 focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar por Cédula, N° de Expediente o Nombre..." type="text"></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-2.5 py-1 rounded-lg bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">apartment</span><span class="font-label-sm text-label-sm font-semibold">Turno Mañana • Sede Principal</span></div><div class="flex items-center gap-space-xs"><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-error text-on-error font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Emergencia</span></button><button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:opacity-95 transition-opacity" type="button"><span class="material-symbols-outlined text-[16px]">add</span><span>Cobro</span></button></div><div class="flex items-center gap-1"><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Alertas Críticas" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><button class="p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" title="Mensajería Interna" type="button"><span class="material-symbols-outlined text-[20px]">forum</span></button></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-margin-desktop flex flex-col gap-space-lg">
+<!-- Sub-Header & Operation Status Banner -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-primary tracking-tight">Área de Caja &amp; Gestión Financiera Diaria</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Caja Principal 01 • Estado: Abierta
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+            Supervisión: Lic. Ruht Mateo
+          </span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">event</span>
+            Martes, 24 de Octubre de 2023
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="flex items-center gap-1 font-data-code text-data-code">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+            Jornada Activa: 07:00 - 19:00
+          </span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+            Corte Fiscal en Línea
+          </span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md transition-all" id="btn-preliminar" onclick="openPrintModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Imprimir Arqueo Preliminar</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all" onclick="scrollToForms('cobro')" type="button">
+<span class="material-symbols-outlined text-[18px]">point_of_sale</span>
+<span>Nuevo Cobro / Factura</span>
+</button>
+</div>
+</div>
+<!-- Financial KPI Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Ingresos Totales -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Ingresos Totales Hoy</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">trending_up</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-data-metric text-data-metric text-on-surface tracking-tight">$4,850.00</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm mt-1">
+<span class="text-on-surface-variant">34 Transacciones</span>
+<span class="text-secondary font-semibold flex items-center text-[12px]"><span class="material-symbols-outlined text-[14px]">arrow_upward</span>+12.4% vs turno prev.</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-md overflow-hidden">
+<div class="bg-primary h-1.5 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Egresos Operativos -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Egresos Operativos</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-data-metric text-data-metric text-error tracking-tight">$1,120.00</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm mt-1">
+<span class="text-on-surface-variant truncate">Insumos Urgencia y Enfermería</span>
+<span class="text-error font-semibold text-[12px]">4 Vales</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-md overflow-hidden">
+<div class="bg-error h-1.5 rounded-full" style="width: 23%"></div>
+</div>
+</div>
+<!-- Balance Neto -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Balance Neto en Caja</span>
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+</div>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-data-metric text-data-metric text-secondary tracking-tight">$3,730.00</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm mt-1">
+<span class="text-secondary font-medium">Superávit Verificado</span>
+<span class="font-data-code text-data-code text-on-surface-variant">Arqueado 100%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 mt-space-md overflow-hidden">
+<div class="bg-secondary h-1.5 rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Desglose por Método -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Canales de Pago</span>
+<span class="font-data-code text-[11px] text-outline">TOTAL BRUTO</span>
+</div>
+<div class="space-y-1.5 text-body-sm font-body-sm">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-primary"></span>Efectivo
+            </span>
+<span class="font-semibold text-on-surface font-data-code">$1,850.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>Tarjetas D/C
+            </span>
+<span class="font-semibold text-on-surface font-data-code">$2,100.00</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>Transferencias
+            </span>
+<span class="font-semibold text-on-surface font-data-code">$900.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Center Operations Workspace: Dual Form Tabs & Visual Telemetry -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start" id="forms-section">
+<!-- Operations Dynamic Forms (8 Columns) -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<!-- Tab Controls Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="inline-flex p-1 bg-surface-container-low rounded-xl">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5" id="tab-cobro-btn" onclick="switchFinanceTab('cobro')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_card</span>
+<span>Emisión de Cobro y Factura</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5" id="tab-egreso-btn" onclick="switchFinanceTab('egreso')" type="button">
+<span class="material-symbols-outlined text-[18px]">outbox</span>
+<span>Egreso Operativo Autorizado</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-data-code text-data-code">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+<span>Terminal POS: POS-01-ARIA</span>
+</div>
+</div>
+<!-- FORM A: Cobro / Facturación -->
+<div class="flex flex-col gap-space-md" id="panel-cobro">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase">N° de Recibo Oficial:</span>
+<span class="font-data-code text-data-code font-bold text-primary px-2 py-0.5 rounded bg-surface-container-highest">REC-2023-0582</span>
+</div>
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Cajero: <strong class="text-on-surface">M. Peña (C04)</strong></span>
+<span>•</span>
+<span>Firma: <strong class="text-secondary">Lic. Ruht Mateo</strong></span>
+</div>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-md" onsubmit="handleReceiptSubmit(event)">
+<!-- Paciente / Titular -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Paciente / Titular del Pago</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">person_search</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Ej. Carlos Eduardo Mendoza Silva" required="" type="text" value="Carlos Eduardo Mendoza Silva">
+</div>
+</div>
+<!-- Expediente / Cédula -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">N° Expediente Clínico / Cédula</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">badge</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="EXP-2023-8942 / V-19.458.120" required="" type="text" value="EXP-2023-8942 (V-19.458.120)">
+</div>
+</div>
+<!-- Servicio Cobrado -->
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Servicio Clínico a Facturar</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary">
+<option value="emergencia">Consulta de Emergencia y Triaje Médico Completo</option>
+<option value="honorarios">Honorarios Médicos Quirúrgicos Especializados</option>
+<option value="hospitalizacion">Hospitalización Sala B - Monitorización General</option>
+<option value="laboratorio">Bioanálisis y Panel Laboratorio Clínico Central</option>
+<option value="farmacia">Medicamentos e Insumos Farmacia Interna</option>
+</select>
+</div>
+<!-- Importe a Cobrar -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Monto a Liquidar (USD $)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">attach_money</span>
+<input class="w-full pl-9 pr-12 py-2 rounded-lg bg-surface-container-low font-headline-sm text-headline-sm text-primary focus:outline-none focus:ring-1 focus:ring-primary font-bold" placeholder="0.00" required="" step="0.01" type="number" value="180.00">
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-data-code text-data-code text-outline">USD</span>
+</div>
+</div>
+<!-- Método de Pago -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Método de Liquidación</label>
+<div class="grid grid-cols-3 gap-1">
+<label class="flex items-center justify-center gap-1 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input checked="" class="text-primary focus:ring-0" name="paymethod" type="radio" value="efectivo">
+<span class="font-label-sm text-label-sm text-on-surface">Efectivo</span>
+</label>
+<label class="flex items-center justify-center gap-1 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="text-primary focus:ring-0" name="paymethod" type="radio" value="tarjeta">
+<span class="font-label-sm text-label-sm text-on-surface">Tarjeta</span>
+</label>
+<label class="flex items-center justify-center gap-1 p-2 rounded-lg bg-surface-container-low cursor-pointer hover:bg-surface-container-high transition-colors">
+<input class="text-primary focus:ring-0" name="paymethod" type="radio" value="transf">
+<span class="font-label-sm text-label-sm text-on-surface">Transf.</span>
+</label>
+</div>
+</div>
+<!-- Acciones de Cobro -->
+<div class="md:col-span-2 pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Incluye impresión térmica de ticket y factura electrónica SENIAT.</span>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Procesar Cobro e Imprimir Factura Fiscal</span>
+</button>
+</div>
+</form>
+</div>
+<!-- FORM B: Egreso Operativo (Hidden by default) -->
+<div class="hidden flex-col gap-space-md" id="panel-egreso">
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-error uppercase">N° Vale de Egreso:</span>
+<span class="font-data-code text-data-code font-bold text-error px-2 py-0.5 rounded bg-error-container text-on-error-container">EGR-2023-0104</span>
+</div>
+<div class="flex items-center gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
+<span>Autorización Requerida: <strong class="text-primary">Lic. Ruht Mateo (Supervisora)</strong></span>
+</div>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-space-md" onsubmit="handleExpenseSubmit(event)">
+<!-- Categoría de Gasto -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Categoría de Gasto Inmediato</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-error">
+<option value="urgencia">Material Descartable / Insumos Urgencia</option>
+<option value="enfermeria">Dotación Instrumental de Enfermería</option>
+<option value="laboratorio_reactivo">Reactivos Críticos Bioanálisis</option>
+<option value="oxigeno">Recarga Cilindro Oxígeno Medicinal</option>
+<option value="mantenimiento">Reparación Técnica Equipos Biomédicos</option>
+</select>
+</div>
+<!-- Proveedor / Solicitante -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Proveedor / Destinatario del Fondo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">local_shipping</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-error" placeholder="Ej. Droguería Médica Central C.A." required="" type="text" value="Droguería Médica del Centro">
+</div>
+</div>
+<!-- Monto -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Monto Solicitado (USD $)</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">attach_money</span>
+<input class="w-full pl-9 pr-12 py-2 rounded-lg bg-surface-container-low font-headline-sm text-headline-sm text-error focus:outline-none focus:ring-1 focus:ring-error font-bold" placeholder="0.00" required="" step="0.01" type="number" value="240.00">
+<span class="absolute right-3 top-1/2 -translate-y-1/2 font-data-code text-data-code text-outline">USD</span>
+</div>
+</div>
+<!-- N° Factura / Soporte Fiscal -->
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">N° Factura o Comprobante Físico</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">tag</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-error" placeholder="Ej. FAC-PROV-9421" required="" type="text" value="FAC-98421">
+</div>
+</div>
+<!-- Justificación Clínica -->
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Justificación de Desembolso de Urgencia</label>
+<textarea class="w-full px-3 py-2 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-error" placeholder="Indicar razón operativa del gasto..." rows="2">Reposición no programada de 10 paquetes de gasas estériles y 20 catéteres venosos periféricos N° 20 para sala de emergencias.</textarea>
+</div>
+<!-- Botón Egreso -->
+<div class="md:col-span-2 pt-space-xs flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-error font-medium">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>Requiere token biométrico o clave de supervisora Lic. Ruht Mateo.</span>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-2.5 rounded-lg bg-error text-on-error hover:opacity-90 font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm transition-all" type="submit">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span>Registrar Egreso y Emitir Comprobante</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- Contextual Live Financial Flow Telemetry (4 Columns) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Live Distribution Chart Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Flujo Real por Método</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-data-code text-[11px] font-bold">100% AUDITADO</span>
+</div>
+<!-- Inline Donut SVG Breakdown -->
+<div class="flex items-center justify-center gap-space-md py-space-xs">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+<!-- Background circle -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#e6eeff" stroke-width="4"></circle>
+<!-- Tarjeta (43.3%) -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#006c4a" stroke-dasharray="38 100" stroke-dashoffset="0" stroke-width="4"></circle>
+<!-- Efectivo (38.1%) -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#004357" stroke-dasharray="33.5 100" stroke-dashoffset="-38" stroke-width="4"></circle>
+<!-- Transferencias (18.6%) -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#005d73" stroke-dasharray="16.5 100" stroke-dashoffset="-71.5" stroke-width="4"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm text-on-surface leading-none">$4.8K</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1">Recaudado</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 font-body-sm text-body-sm flex-1">
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>Tarjetas</span>
+<span class="font-data-code font-bold text-on-surface">43.3%</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span>Efectivo</span>
+<span class="font-data-code font-bold text-on-surface">38.1%</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>Transf.</span>
+<span class="font-data-code font-bold text-on-surface">18.6%</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">lock</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Bóveda Chica de Custodia</span>
+</div>
+<span class="font-data-code text-data-code font-bold text-primary">$1,500.00</span>
+</div>
+</div>
+<!-- Quick Institutional Cash Protocol Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Protocolo de Caja Clínica Arias</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Todo ingreso superior a <strong>$500.00 USD</strong> en efectivo requiere registro de billetes de alta denominación en acta de supervisión física. La caja se concilia cada 4 horas con enfermería y administración.
+          </p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-label-sm text-outline">Próximo corte: 14:00 hrs</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Sin discrepancias</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Historial Detallado de Transacciones de Caja (Auditoría en Tiempo Real) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+  <!-- Header del Cierre Diario Oficial -->
+  <div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+    <div class="flex flex-col">
+      <div class="flex items-center gap-space-xs">
+        <span class="font-headline-md text-headline-md text-primary tracking-tight">Cierre Diario Oficial de Caja y Arqueo Físico</span>
+        <span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">Corte Fiscal N° 419</span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+          Auditado En Línea
+        </span>
+      </div>
+      <span class="font-body-sm text-body-sm text-on-surface-variant">
+        Validación oficial de ingresos, egresos con vales autorizados, fondo de caja chica y bloqueo definitivo del período operativo.
+      </span>
+    </div>
+    <div class="flex items-center gap-space-xs">
+      <button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-all" onclick="exportReport('PDF')" type="button">
+        <span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+        <span>Exportar Acta Cierre PDF</span>
+      </button>
+      <button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-sm text-label-sm transition-all" onclick="exportReport('Excel')" type="button">
+        <span class="material-symbols-outlined text-[16px]">table_view</span>
+        <span>Exportar Balance Excel</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Comparative Arqueo Table Grid (3 Columnas Clínicas Especializadas) -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md items-stretch">
+    <!-- Columna 1: Resumen en Sistema -->
+    <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+      <div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[20px] text-primary">devices</span>
+          <span class="font-label-md text-label-md text-on-surface uppercase font-bold">1. Resumen en Sistema</span>
+        </div>
+        <span class="font-data-code text-[11px] text-primary font-bold px-2 py-0.5 rounded bg-primary-fixed">AUTO-CALC</span>
+      </div>
+
+      <div class="space-y-2 font-body-sm text-body-sm my-space-sm">
+        <div class="flex justify-between items-center py-0.5">
+          <span class="text-on-surface font-semibold">Total Ingresos Brutos (34 ops):</span>
+          <span class="font-data-code font-bold text-on-surface text-[15px]">$4,850.00</span>
+        </div>
+        
+        <div class="bg-surface-container-lowest/80 p-2 rounded-lg space-y-1">
+          <div class="text-[11px] uppercase tracking-wider text-outline font-bold">Desglose por Método (Sistema):</div>
+          <div class="flex justify-between items-center text-[12px]">
+            <span class="text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Efectivo Sistema:</span>
+            <span class="font-data-code font-semibold text-on-surface">$1,850.00</span>
+          </div>
+          <div class="flex justify-between items-center text-[12px]">
+            <span class="text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Tarjetas / Lotes POS:</span>
+            <span class="font-data-code font-semibold text-on-surface">$2,100.00</span>
+          </div>
+          <div class="flex justify-between items-center text-[12px]">
+            <span class="text-on-surface-variant flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>Transferencias Bancarias:</span>
+            <span class="font-data-code font-semibold text-on-surface">$900.00</span>
+          </div>
+        </div>
+
+        <div class="flex justify-between items-center pt-0.5 text-error">
+          <span>(-) Egresos Operativos con Vales:</span>
+          <span class="font-data-code font-bold text-error">-$1,120.00</span>
+        </div>
+
+        <div class="flex justify-between items-center text-on-surface-variant pt-0.5">
+          <span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-outline">savings</span>Fondo Bóveda / Caja Chica Inicial:</span>
+          <span class="font-data-code font-semibold text-on-surface">+$500.00</span>
+        </div>
+
+        <div class="p-2 rounded bg-surface-container-high/60 flex justify-between items-center font-bold text-on-surface">
+          <span class="text-label-sm">Efectivo Neto Esperado en Gaveta:</span>
+          <span class="font-data-code text-primary font-bold">$1,230.00</span>
+        </div>
+      </div>
+
+      <div class="pt-space-xs border-t border-surface-container-high flex justify-between items-center">
+        <span class="font-label-md text-label-md text-on-surface font-bold">BALANCE FINAL ESPERADO:</span>
+        <span class="font-headline-sm text-headline-sm font-bold text-primary">$4,230.00</span>
+      </div>
+    </div>
+
+    <!-- Columna 2: Arqueo Físico Reportado -->
+    <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+      <div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[20px] text-secondary">inventory</span>
+          <span class="font-label-md text-label-md text-secondary uppercase font-bold">2. Arqueo Físico Reportado</span>
+        </div>
+        <span class="font-data-code text-[11px] text-secondary font-bold px-2 py-0.5 rounded bg-secondary-container">RECUENTO</span>
+      </div>
+
+      <div class="space-y-2 font-body-sm text-body-sm my-space-sm">
+        <!-- Desglose de Billetes y Monedas -->
+        <div class="bg-surface-container-lowest/90 p-2 rounded-lg flex flex-col gap-1">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] uppercase tracking-wider text-outline font-bold">Desglose Billetes y Monedas Físicas:</span>
+            <span class="font-data-code text-[11px] text-secondary font-bold">$1,230.00 USD</span>
+          </div>
+          <div class="grid grid-cols-3 gap-1 pt-1">
+            <div class="flex items-center justify-between px-1.5 py-0.5 rounded bg-surface-container-low text-[11px]">
+              <span class="text-outline font-data-code">$100:</span>
+              <span class="font-bold font-data-code text-on-surface">8 ($800)</span>
+            </div>
+            <div class="flex items-center justify-between px-1.5 py-0.5 rounded bg-surface-container-low text-[11px]">
+              <span class="text-outline font-data-code">$50:</span>
+              <span class="font-bold font-data-code text-on-surface">4 ($200)</span>
+            </div>
+            <div class="flex items-center justify-between px-1.5 py-0.5 rounded bg-surface-container-low text-[11px]">
+              <span class="text-outline font-data-code">$20:</span>
+              <span class="font-bold font-data-code text-on-surface">7 ($140)</span>
+            </div>
+            <div class="flex items-center justify-between px-1.5 py-0.5 rounded bg-surface-container-low text-[11px]">
+              <span class="text-outline font-data-code">$10:</span>
+              <span class="font-bold font-data-code text-on-surface">6 ($60)</span>
+            </div>
+            <div class="flex items-center justify-between px-1.5 py-0.5 rounded bg-surface-container-low text-[11px]">
+              <span class="text-outline font-data-code">$5:</span>
+              <span class="font-bold font-data-code text-on-surface">4 ($20)</span>
+            </div>
+            <div class="flex items-center justify-between px-1.5 py-0.5 rounded bg-surface-container-low text-[11px]">
+              <span class="text-outline font-data-code">$1+Mon:</span>
+              <span class="font-bold font-data-code text-on-surface">10 ($10)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Entradas de Comprobantes Físicos -->
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant">Total Efectivo Contado (Gaveta):</span>
+          <input class="w-28 text-right px-2 py-1 rounded bg-surface-container-lowest font-data-code font-bold text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="input-fisico-efectivo" oninput="calculateDiscrepancy()" step="0.01" type="number" value="1230.00">
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant">Vouchers POS Físicos Recontados:</span>
+          <input class="w-28 text-right px-2 py-1 rounded bg-surface-container-lowest font-data-code font-bold text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="input-fisico-tarjeta" oninput="calculateDiscrepancy()" step="0.01" type="number" value="2100.00">
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-on-surface-variant">Transferencias Verificadas:</span>
+          <input class="w-28 text-right px-2 py-1 rounded bg-surface-container-lowest font-data-code font-bold text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="input-fisico-banco" oninput="calculateDiscrepancy()" step="0.01" type="number" value="900.00">
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="text-error font-medium">Vales de Egreso Físicos Firmados:</span>
+          <span class="font-data-code font-bold text-error px-2 py-0.5 rounded bg-error-container/20">4 vales ($1,120.00)</span>
+        </div>
+      </div>
+
+      <div class="pt-space-xs border-t border-surface-container-high flex justify-between items-center">
+        <span class="font-label-md text-label-md text-secondary font-bold">TOTAL FÍSICO CONCILIADO:</span>
+        <span class="font-headline-sm text-headline-sm font-bold text-secondary" id="label-total-fisico">$4,230.00</span>
+      </div>
+    </div>
+
+    <!-- Columna 3: Dictamen de Conciliación -->
+    <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between shadow-sm">
+      <div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[20px] text-secondary">task_alt</span>
+          <span class="font-label-md text-label-md text-on-surface uppercase font-bold">3. Dictamen de Conciliación</span>
+        </div>
+        <span class="inline-flex items-center gap-1 text-[11px] text-secondary font-bold px-2 py-0.5 rounded bg-secondary-container">
+          <span class="material-symbols-outlined text-[13px]">check_circle</span>
+          Cuadre Conforme 100%
+        </span>
+      </div>
+
+      <div class="space-y-2 my-space-sm font-body-sm text-body-sm">
+        <div class="p-space-sm rounded-lg bg-secondary-container/40 flex items-center justify-between">
+          <div>
+            <div class="font-label-sm text-label-sm text-on-secondary-container font-semibold">Diferencia Neta de Cuadre:</div>
+            <div class="font-data-code text-[11px] text-outline">Físico vs Sistema Registrado</div>
+          </div>
+          <span class="font-data-code text-data-metric font-bold text-secondary" id="label-diferencia">$0.00 USD</span>
+        </div>
+
+        <!-- Metadatos de Autorización y Cierre -->
+        <div class="grid grid-cols-2 gap-2 text-[12px]">
+          <div class="p-2 rounded bg-surface-container-lowest flex flex-col">
+            <span class="text-[10px] text-outline uppercase font-semibold">Turno de Cierre</span>
+            <span class="font-semibold text-on-surface flex items-center gap-1 mt-0.5">
+              <span class="material-symbols-outlined text-[14px] text-primary">wb_sunny</span>
+              Mañana (07:00-15:00)
+            </span>
+          </div>
+          <div class="p-2 rounded bg-surface-container-lowest flex flex-col">
+            <span class="text-[10px] text-outline uppercase font-semibold">Precinto Fiscal</span>
+            <span class="font-data-code font-bold text-primary mt-0.5">#ARQ-2023-419</span>
+          </div>
+          <div class="p-2 rounded bg-surface-container-lowest flex flex-col">
+            <span class="text-[10px] text-outline uppercase font-semibold">Cajero Operador</span>
+            <span class="font-semibold text-on-surface mt-0.5 truncate">M. Peña (C04)</span>
+          </div>
+          <div class="p-2 rounded bg-surface-container-lowest flex flex-col">
+            <span class="text-[10px] text-outline uppercase font-semibold">Supervisora / Auditor</span>
+            <span class="font-semibold text-secondary mt-0.5 truncate">Lic. Ruht Mateo</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <label class="font-label-sm text-[11px] text-on-surface-variant uppercase font-semibold">Observaciones de Cierre y Notas de Auditoría</label>
+          <textarea class="w-full p-2 rounded-lg bg-surface-container-lowest font-body-sm text-[12px] text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" id="observaciones-cierre" placeholder="Notas sobre discrepancias, billetes en custodia o remesas..." rows="2">Cuadre perfecto del turno matutino sin discrepancias. Recuento físico de gaveta verificado con fondo base ($500). Lotes de terminal POS-01 cerrados con 34 vouchers.</textarea>
+        </div>
+      </div>
+
+      <div class="pt-space-xs border-t border-surface-container-high flex items-center justify-between">
+        <div class="flex items-center gap-1">
+          <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+          <span class="font-label-sm text-label-sm text-on-surface font-semibold">Balance Cuadrado y Certificado</span>
+        </div>
+        <span class="font-data-code text-[11px] text-outline">SHA-256: 8a4f...e921</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Supervisor Sign-Off & Execution CTA Bar -->
+  <div class="bg-surface-container-low p-space-md rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-space-md shadow-sm">
+    <div class="flex items-center gap-space-md">
+      <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm">
+        <span class="material-symbols-outlined text-[24px]">verified_user</span>
+      </div>
+      <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-on-surface font-bold">Lic. Ruht Mateo • Supervisora General de Finanzas</span>
+        <span class="font-body-sm text-body-sm text-on-surface-variant">Autorizado y Bloqueado por Supervisión General • Credencial Auditor RM-9428-FIN</span>
+        <span class="font-data-code text-[11px] text-outline">Precinto Digital: ARQ-2023-419 • Token Biométrico Validado</span>
+      </div>
+    </div>
+    <div class="flex flex-wrap items-center gap-space-sm">
+      <div class="text-right hidden sm:block">
+        <div class="font-label-sm text-label-sm text-error font-bold flex items-center justify-end gap-1">
+          <span class="material-symbols-outlined text-[16px]">lock</span>
+          <span>Acción Irreversible</span>
+        </div>
+        <div class="font-label-sm text-[11px] text-outline">Bloqueará transacciones y cerrará libro fiscal</div>
+      </div>
+      <button class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs" onclick="executeDailyClosure()" type="button">
+        <span class="material-symbols-outlined text-[20px]">lock_person</span>
+        <span>Ejecutar Cierre Diario Oficial y Bloqueo de Período</span>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Módulo Oficial de Cierre Diario de Caja y Arqueo Institucional -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Cierre Diario Oficial de Caja y Arqueo Físico</span>
+<span class="px-2.5 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-bold">Corte Fiscal N° 419</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+            Validación de libro de caja, arqueo físico de bóveda y bloqueo definitivo de período administrativo.
+          </span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-sm text-label-sm transition-all" onclick="exportReport('PDF')" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>Exportar PDF</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-secondary font-label-sm text-label-sm transition-all" onclick="exportReport('Excel')" type="button">
+<span class="material-symbols-outlined text-[16px]">table_view</span>
+<span>Exportar Excel</span>
+</button>
+</div>
+</div>
+<!-- Comparative Arqueo Table Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+<!-- Sistema Totales -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">1. Resumen en Sistema</span>
+<span class="material-symbols-outlined text-[20px] text-primary">devices</span>
+</div>
+<div class="space-y-2 font-body-sm text-body-sm">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Efectivo Ingresado:</span>
+<span class="font-data-code font-semibold text-on-surface">$1,850.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">(-) Egresos Efectivo:</span>
+<span class="font-data-code font-semibold text-error">-$1,120.00</span>
+</div>
+<div class="flex justify-between font-bold text-on-surface pt-1">
+<span>Efectivo Neto Sistema:</span>
+<span class="font-data-code text-primary">$730.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Lotes Tarjeta (POS):</span>
+<span class="font-data-code font-semibold text-on-surface">$2,100.00</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Transferencias Bancarias:</span>
+<span class="font-data-code font-semibold text-on-surface">$900.00</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface font-bold">TOTAL ESPERADO:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-primary">$3,730.00</span>
+</div>
+</div>
+<!-- Conteo Físico Input -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-secondary uppercase font-bold">2. Arqueo Físico Reportado</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">inventory</span>
+</div>
+<div class="space-y-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Efectivo en Bóveda/Caja:</span>
+<input class="w-28 text-right px-2 py-1 rounded bg-surface-container-lowest font-data-code font-bold text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="input-fisico-efectivo" oninput="calculateDiscrepancy()" step="0.01" type="number" value="730.00">
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Vouchers Tarjeta (Físico):</span>
+<input class="w-28 text-right px-2 py-1 rounded bg-surface-container-lowest font-data-code font-bold text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="input-fisico-tarjeta" oninput="calculateDiscrepancy()" step="0.01" type="number" value="2100.00">
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Confirmación Bancaria:</span>
+<input class="w-28 text-right px-2 py-1 rounded bg-surface-container-lowest font-data-code font-bold text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" id="input-fisico-banco" oninput="calculateDiscrepancy()" step="0.01" type="number" value="900.00">
+</div>
+<div class="text-[11px] text-outline pt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+<span>Incluye billetes contados y lotes POS cerrados.</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex justify-between items-center">
+<span class="font-label-md text-label-md text-secondary font-bold">TOTAL FÍSICO ARQUEADO:</span>
+<span class="font-headline-sm text-headline-sm font-bold text-secondary" id="label-total-fisico">$3,730.00</span>
+</div>
+</div>
+<!-- Conciliación & Diferencias -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-on-surface uppercase font-bold">3. Dictamen de Conciliación</span>
+<span class="material-symbols-outlined text-[20px] text-secondary">task_alt</span>
+</div>
+<div class="space-y-2.5">
+<div class="p-space-sm rounded-lg bg-secondary-container/40 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-semibold">Diferencia Neta (Físico vs Sistema):</span>
+<span class="font-data-code text-data-metric font-bold text-secondary" id="label-diferencia">$0.00 USD</span>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-sm text-label-sm text-on-surface-variant uppercase">Observaciones de Cierre Oficial</label>
+<textarea class="w-full p-2 rounded-lg bg-surface-container-lowest font-body-sm text-body-sm text-on-surface placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" id="observaciones-cierre" placeholder="Notas sobre discrepancias, billetes en custodia o remesas..." rows="2">Cuadre perfecto de turno matutino sin faltantes ni sobrantes. Lotes de tarjetas liquidados con terminal POS-01.</textarea>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Cuadre Exacto Confirmado</span>
+</div>
+</div>
+</div>
+<!-- Supervisor Sign-Off & Execution CTA -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Lic. Ruht Mateo • Supervisora General</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Responsable de Auditoría Clínica y Bloqueo Periódico de Caja</span>
+<span class="font-data-code text-[11px] text-outline">Credencial Auditor: RM-9428-FIN • Doble Factor Biomédico Habilitado</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="text-right hidden sm:block">
+<div class="font-label-sm text-label-sm text-error font-bold flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span>Acción Irreversible</span>
+</div>
+<div class="font-label-sm text-[11px] text-outline">Bloqueará la edición de transacciones del 24/10</div>
+</div>
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-secondary text-on-secondary hover:bg-on-secondary-container font-label-md text-label-md font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs" onclick="executeDailyClosure()" type="button">
+<span class="material-symbols-outlined text-[20px]">lock_person</span>
+<span>Ejecutar Cierre Diario de Caja y Bloqueo de Período</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-32 transition-transform duration-300 ease-out" id="toast-notification">
+<div class="bg-inverse-surface text-inverse-on-surface px-space-md py- space-sm rounded-xl shadow-xl flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary-fixed" id="toast-icon">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold" id="toast-title">Operación Completada</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80" id="toast-desc">Recibo generado e impreso correctamente.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function switchFinanceTab(tab) {
+    const cobroBtn = document.getElementById('tab-cobro-btn');
+    const egresoBtn = document.getElementById('tab-egreso-btn');
+    const cobroPanel = document.getElementById('panel-cobro');
+    const egresoPanel = document.getElementById('panel-egreso');
+
+    if (tab === 'cobro') {
+      cobroBtn.className = 'px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5';
+      egresoBtn.className = 'px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5';
+      cobroPanel.classList.remove('hidden');
+      cobroPanel.classList.add('flex');
+      egresoPanel.classList.remove('flex');
+      egresoPanel.classList.add('hidden');
+    } else {
+      egresoBtn.className = 'px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-error font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5';
+      cobroBtn.className = 'px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5';
+      egresoPanel.classList.remove('hidden');
+      egresoPanel.classList.add('flex');
+      cobroPanel.classList.remove('flex');
+      cobroPanel.classList.add('hidden');
+    }
+  }
+
+  function scrollToForms(tab) {
+    switchFinanceTab(tab);
+    const element = document.getElementById('forms-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function calculateDiscrepancy() {
+    const ef = parseFloat(document.getElementById('input-fisico-efectivo').value) || 0;
+    const tj = parseFloat(document.getElementById('input-fisico-tarjeta').value) || 0;
+    const bc = parseFloat(document.getElementById('input-fisico-banco').value) || 0;
+
+    const totalFisico = ef + tj + bc;
+    const sistemaTotal = 3730.00;
+    const diff = totalFisico - sistemaTotal;
+
+    document.getElementById('label-total-fisico').textContent = '$' + totalFisico.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    
+    const labelDiff = document.getElementById('label-diferencia');
+    if (Math.abs(diff) < 0.01) {
+      labelDiff.textContent = '$0.00 USD';
+      labelDiff.className = 'font-data-code text-data-metric font-bold text-secondary';
+    } else if (diff > 0) {
+      labelDiff.textContent = '+$' + diff.toFixed(2) + ' (Sobrante)';
+      labelDiff.className = 'font-data-code text-data-metric font-bold text-tertiary';
+    } else {
+      labelDiff.textContent = '-$' + Math.abs(diff).toFixed(2) + ' (Faltante)';
+      labelDiff.className = 'font-data-code text-data-metric font-bold text-error';
+    }
+  }
+
+  function showToast(title, desc, isError = false) {
+    const toast = document.getElementById('toast-notification');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+    const toastIcon = document.getElementById('toast-icon');
+
+    toastTitle.textContent = title;
+    toastDesc.textContent = desc;
+    toastIcon.textContent = isError ? 'error' : 'check_circle';
+    toastIcon.className = isError ? 'material-symbols-outlined text-error-container' : 'material-symbols-outlined text-secondary-fixed';
+
+    toast.classList.remove('translate-y-32');
+    toast.classList.add('translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0');
+      toast.classList.add('translate-y-32');
+    }, 3800);
+  }
+
+  function handleReceiptSubmit(e) {
+    e.preventDefault();
+    showToast('Cobro Procesado Exitosamente', 'Recibo REC-2023-0582 emitido e impreso en ticketera fiscal.');
+  }
+
+  function handleExpenseSubmit(e) {
+    e.preventDefault();
+    showToast('Egreso Registrado', 'Vale EGR-2023-0104 visado bajo autorización de Lic. Ruht Mateo.');
+  }
+
+  function simulateReceiptAction(reciboId, accion) {
+    const actionsMap = {
+      ver: 'Visualizando soporte digital de',
+      imprimir: 'Re-enviando a cola de impresión ticket',
+      duplicado: 'Generando duplicado fiscal certificado de'
+    };
+    showToast('Auditoría de Recibo', actionsMap[accion] + ' ' + reciboId);
+  }
+
+  function exportReport(format) {
+    showToast('Reporte Generado', 'Descargando arqueo consolidado en formato ' + format + '...');
+  }
+
+  function openPrintModal() {
+    showToast('Impresora Fiscal', 'Imprimiendo Arqueo Preliminar (34 txs) en POS-01-ARIA.');
+  }
+
+  function executeDailyClosure() {
+    if (confirm('¿Confirma el Cierre Definitivo de Caja para el día 24 de Octubre de 2023 por la Supervisora Lic. Ruht Mateo? Esta acción bloqueará nuevas emisiones en este turno.')) {
+      showToast('Cierre de Período Exitoso', 'Caja Principal 01 cerrada formalmente. Balance enviado a Dirección Médica y Contabilidad.');
+    }
+  }
+</script></main></div>
+
+</body></html>
