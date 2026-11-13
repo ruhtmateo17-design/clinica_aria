@@ -1,0 +1,104 @@
+/* ===== Clínica Arias · iconos 3D dinámicos + perfil de Dirección ===== */
+
+/* --- Iconos 3D (se activan por JS con data-d3) --- */
+.material-symbols-outlined[data-d3]{
+  display:inline-block;
+  font-variation-settings:'FILL' 1,'wght' 600,'GRAD' 0,'opsz' 24;
+  background:linear-gradient(150deg,var(--i1) 0%,var(--i2) 55%,var(--i3) 100%);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+  filter:
+    drop-shadow(0 -.5px 0 rgba(255,255,255,.65))
+    drop-shadow(.6px 1px 0 var(--i3))
+    drop-shadow(1.2px 2px 0 var(--i3))
+    drop-shadow(2px 4px 3px var(--sh));
+  transition:transform .4s cubic-bezier(.2,.9,.3,1.5),filter .3s;
+  transform-style:preserve-3d;will-change:transform;
+}
+/* Giro 3D al pasar el mouse */
+a:hover > .material-symbols-outlined[data-d3],
+button:hover > .material-symbols-outlined[data-d3],
+a:hover .material-symbols-outlined[data-d3],
+button:hover .material-symbols-outlined[data-d3],
+.arias-tile:hover .material-symbols-outlined[data-d3],
+.group:hover .material-symbols-outlined[data-d3]{
+  transform:perspective(200px) rotateY(24deg) rotateX(-10deg) scale(1.22) translateY(-1px);
+}
+/* Iconos grandes flotan suavemente */
+.material-symbols-outlined[data-d3].d3-float{animation:ariasFloat 3.6s ease-in-out infinite;animation-delay:var(--dly,0s)}
+/* Iconos de latido (corazón, signos vitales) */
+.material-symbols-outlined[data-d3].d3-beat{animation:ariasBeat 1.5s ease-in-out infinite}
+/* Iconos de alerta */
+.material-symbols-outlined[data-d3].d3-alert{animation:ariasRing 2.4s ease-in-out infinite;transform-origin:50% 10%}
+
+@keyframes ariasFloat{0%,100%{transform:translateY(0) rotateY(0)}50%{transform:translateY(-3px) rotateY(14deg)}}
+@keyframes ariasBeat{0%,100%{transform:scale(1)}14%{transform:scale(1.2)}28%{transform:scale(1)}42%{transform:scale(1.14)}70%{transform:scale(1)}}
+@keyframes ariasRing{0%,100%{transform:rotate(0)}8%{transform:rotate(16deg)}16%{transform:rotate(-14deg)}24%{transform:rotate(9deg)}32%{transform:rotate(0)}}
+
+/* Baldosas (contenedores de iconos) con relieve */
+.arias-tile{
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.75),inset 0 -3px 0 rgba(0,40,60,.10),0 8px 14px -6px rgba(0,67,87,.40);
+  transition:transform .3s cubic-bezier(.2,.9,.3,1.4),box-shadow .3s;
+}
+.arias-tile:hover{transform:translateY(-3px);box-shadow:inset 0 2px 0 rgba(255,255,255,.85),inset 0 -3px 0 rgba(0,40,60,.12),0 14px 20px -8px rgba(0,67,87,.50)}
+
+/* --- Avatar 3D --- */
+.ap-avatar{position:relative;flex:none;border-radius:50%;padding:3px;
+  background:conic-gradient(from 210deg,#93d3ef,#0d5c75,#82f5c1,#93d3ef);
+  box-shadow:0 10px 20px -8px rgba(0,67,87,.6),inset 0 2px 3px rgba(255,255,255,.8);
+  animation:ariasFloat 5s ease-in-out infinite}
+.ap-face{position:relative;overflow:hidden;width:100%;height:100%;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 30% 25%,#5cc8ee,#0d5c75 65%,#004357);color:#fff;font-weight:800;
+  font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:.02em;
+  text-shadow:0 2px 0 #00293a,0 5px 8px rgba(0,0,0,.35);box-shadow:inset 0 -6px 10px rgba(0,0,0,.25)}
+.ap-face img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ap-dot{position:absolute;right:1px;bottom:1px;width:12px;height:12px;border-radius:50%;background:#2ee59d;border:2px solid #fff;box-shadow:0 0 0 0 rgba(46,229,157,.6);animation:apPulse 2s infinite}
+@keyframes apPulse{70%{box-shadow:0 0 0 8px rgba(46,229,157,0)}100%{box-shadow:0 0 0 0 rgba(46,229,157,0)}}
+
+/* --- Tarjeta de perfil en barra lateral --- */
+.ap-side-card{display:flex;align-items:center;gap:10px;padding:10px;margin-bottom:10px;border-radius:16px;
+  background:linear-gradient(145deg,#ffffff,#e6eeff);
+  box-shadow:inset 0 2px 0 #fff,0 10px 20px -10px rgba(0,67,87,.45);border:1px solid #dde9ff}
+.ap-side-card .ap-n{font:700 13px/1.15 'Plus Jakarta Sans',sans-serif;color:#004357}
+.ap-side-card .ap-c{font:600 10px/1.2 Inter,sans-serif;color:#006c4a;text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.ap-head-chip{display:flex;align-items:center;gap:8px}
+.ap-head-chip .ap-n{font:700 12px/1.1 'Plus Jakarta Sans',sans-serif;color:#004357}
+.ap-head-chip .ap-c{font:500 10px/1.1 Inter,sans-serif;color:#40484c}
+@media(max-width:900px){.ap-head-chip .ap-txt{display:none}}
+
+/* --- Tarjeta flotante en el hero del portal --- */
+.ap-hero-card{position:absolute;left:14px;top:14px;z-index:5;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;
+  border-radius:999px;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);
+  box-shadow:0 14px 28px -10px rgba(0,40,60,.55),inset 0 2px 0 #fff;animation:ariasFloat 6s ease-in-out infinite}
+.ap-hero-card .ap-n{font:800 13px/1.1 'Plus Jakarta Sans',sans-serif;color:#004357}
+.ap-hero-card .ap-c{font:600 10px/1.2 Inter,sans-serif;color:#006c4a;text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+
+/* --- Sección Dirección General (portal) --- */
+.ap-dir{position:relative;overflow:hidden;border-radius:28px;padding:34px;
+  background:radial-gradient(circle at 12% 0%,#bde9ff 0,transparent 45%),linear-gradient(135deg,#f8f9ff,#e6eeff);
+  box-shadow:0 30px 60px -30px rgba(0,67,87,.5),inset 0 2px 0 #fff;border:1px solid #dde9ff;
+  display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+@media(max-width:800px){.ap-dir{grid-template-columns:1fr;text-align:center;justify-items:center;padding:24px}}
+.ap-dir .ap-big{width:190px;height:190px;font-size:64px}
+.ap-dir .ap-kicker{display:inline-flex;align-items:center;gap:6px;font:700 11px Inter,sans-serif;color:#006c4a;text-transform:uppercase;letter-spacing:.1em;
+  background:#82f5c1;padding:5px 12px;border-radius:999px;box-shadow:inset 0 2px 0 rgba(255,255,255,.6),0 6px 10px -6px rgba(0,108,74,.6)}
+.ap-dir h2{font:800 34px/1.1 'Plus Jakarta Sans',sans-serif;color:#004357;margin:12px 0 4px;text-shadow:0 2px 0 #fff}
+.ap-dir .ap-role{font:600 15px Inter,sans-serif;color:#0d5c75}
+.ap-dir p.ap-msg{font:400 15px/1.6 Inter,sans-serif;color:#40484c;max-width:640px;margin:14px 0}
+.ap-chips{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
+@media(max-width:800px){.ap-chips{justify-content:center}}
+.ap-chip{display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:16px;background:#fff;
+  font:600 13px Inter,sans-serif;color:#0d1c2f;box-shadow:inset 0 2px 0 #fff,0 10px 18px -10px rgba(0,67,87,.5);transition:transform .3s cubic-bezier(.2,.9,.3,1.4)}
+.ap-chip:hover{transform:translateY(-4px) rotate(-1deg)}
+.ap-chip .ic{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(145deg,#e6eeff,#c9defa)}
+.ap-btns{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:800px){.ap-btns{justify-content:center}}
+.ap-btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:14px;font:700 14px Inter,sans-serif;text-decoration:none;
+  transition:transform .25s,box-shadow .25s}
+.ap-btn.p{background:linear-gradient(145deg,#0d5c75,#004357);color:#fff;box-shadow:inset 0 2px 0 rgba(255,255,255,.25),0 10px 18px -8px rgba(0,67,87,.8)}
+.ap-btn.s{background:#fff;color:#004357;box-shadow:inset 0 2px 0 #fff,0 10px 18px -10px rgba(0,67,87,.5)}
+.ap-btn:hover{transform:translateY(-3px)}
+
+@media (prefers-reduced-motion:reduce){
+  .material-symbols-outlined[data-d3],.ap-avatar,.ap-hero-card,.ap-dot{animation:none!important}
+}
