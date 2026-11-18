@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agendar citas · Clínica Arias</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--p:#004357;--pc:#0d5c75;--s:#006c4a;--sc:#82f5c1;--bg:#f8f9ff;--card:#fff;--tx:#0d1c2f;--mut:#40484c;--line:#d5e3fd;--soft:#eff4ff;--err:#ba1a1a;--errc:#ffdad6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 Inter,system-ui,sans-serif}
+.ms{font-family:'Material Symbols Outlined';font-size:20px;vertical-align:middle;line-height:1}
+h1,h2,h3{font-family:'Plus Jakarta Sans',Inter,sans-serif;margin:0;color:var(--p)}
+header{background:linear-gradient(90deg,var(--p),var(--pc));color:#fff;padding:14px 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:5}
+header h1{color:#fff;font-size:20px;flex:1}
+.home{display:inline-flex;align-items:center;gap:6px;background:#fff;color:var(--p);padding:8px 14px;border-radius:10px;font-weight:600;text-decoration:none}
+.home:hover,.home:focus-visible{background:var(--sc)}
+.link{color:#d6f0fa;text-decoration:none;font-weight:500}.link:hover{text-decoration:underline}
+main{max-width:1100px;margin:0 auto;padding:20px}
+.tabs{display:flex;gap:6px;margin-bottom:18px;border-bottom:2px solid var(--line)}
+.tab{background:none;border:0;padding:10px 16px;font:600 14px Inter;color:var(--mut);cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tab[aria-selected=true]{color:var(--p);border-color:var(--s)}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:20px;align-items:start}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 1px 8px rgba(0,0,0,.06)}
+.card h2{font-size:17px;margin-bottom:12px}
+label{display:block;font-weight:600;font-size:12px;margin:12px 0 4px;color:var(--mut)}
+input,select,textarea{width:100%;padding:9px 11px;border:1px solid #bfc8cd;border-radius:9px;font:inherit;background:#fff;color:var(--tx)}
+input:focus,select:focus,textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--pc);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.slots{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.slot{padding:7px 11px;border-radius:8px;border:1px solid #bfc8cd;background:#fff;cursor:pointer;font:500 13px Inter}
+.slot[aria-pressed=true]{background:var(--s);border-color:var(--s);color:#fff}
+.slot:disabled{background:var(--soft);color:#9aa5ab;text-decoration:line-through;cursor:not-allowed}
+.btn{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:10px;padding:10px 16px;font:600 14px Inter;cursor:pointer;background:var(--p);color:#fff}
+.btn:hover{background:var(--pc)}.btn.g{background:var(--s)}.btn.l{background:var(--soft);color:var(--p)}.btn.d{background:var(--errc);color:var(--err)}
+.btn.sm{padding:6px 10px;font-size:12px}
+.cita{display:grid;grid-template-columns:78px 1fr auto;gap:12px;padding:12px 0;border-top:1px solid var(--line);align-items:center}
+.cita:first-of-type{border-top:0}
+.hora{font:700 15px 'Plus Jakarta Sans';color:var(--p);text-align:center;background:var(--soft);border-radius:10px;padding:8px 4px}
+.hora small{display:block;font:500 11px Inter;color:var(--mut)}
+.meta{color:var(--mut);font-size:12px}
+.b{display:inline-block;padding:1px 8px;border-radius:99px;font-size:11px;font-weight:600;margin-left:6px}
+.b.pendiente{background:#fff0cc;color:#7a5200}.b.confirmada{background:var(--sc);color:#00714e}.b.cancelada{background:var(--errc);color:var(--err)}
+.acts{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.empty{color:var(--mut);padding:24px 0;text-align:center}
+.item{display:flex;gap:8px;margin-bottom:8px}.item input{flex:1}.item select{flex:1}
+.bar{display:flex;gap:10px;align-items:end;margin-bottom:10px}.bar>div{flex:1}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--p);color:#fff;padding:11px 18px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s}
+#toast.on{opacity:1}
+@media(prefers-reduced-motion:reduce){#toast{transition:none}}
+</style></head><body>
+<header>
+  <a class="home" href="index.html"><span class="ms">home</span>Inicio</a>
+  <h1>Agendar citas</h1>
+  <a class="link" href="panel.html">Ir al panel</a>
+</header>
+<main>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="t1" aria-selected="true" data-tab="agenda">Citas</button>
+    <button class="tab" role="tab" id="t2" aria-selected="false" data-tab="opciones">Opciones editables</button>
+  </div>
+
+  <section id="agenda" class="grid">
+    <div class="card">
+      <h2>Nueva cita</h2>
+      <form id="f" autocomplete="off">
+        <label for="pac">Nombre del paciente</label><input id="pac" required>
+        <div class="row">
+          <div><label for="tel">Teléfono</label><input id="tel" type="tel" required></div>
+          <div><label for="fecha">Fecha</label><input id="fecha" type="date" required></div>
+        </div>
+        <div class="row">
+          <div><label for="esp">Especialidad</label><select id="esp"></select></div>
+          <div><label for="med">Profesional</label><select id="med"></select></div>
+        </div>
+        <label>Hora disponible</label><div class="slots" id="slots"></div>
+        <label for="mot">Motivo de la consulta</label><textarea id="mot" rows="2"></textarea>
+        <p style="margin:16px 0 0"><button class="btn g" type="submit"><span class="ms">event_available</span>Agendar cita</button></p>
+      </form>
+    </div>
+    <div class="card">
+      <h2>Citas agendadas</h2>
+      <div class="bar">
+        <div><label for="ver" style="margin-top:0">Ver fecha</label><input id="ver" type="date"></div>
+        <button class="btn l" id="todas" type="button">Ver todas</button>
+      </div>
+      <div id="lista"></div>
+    </div>
+  </section>
+
+  <section id="opciones" hidden>
+    <div class="grid">
+      <div class="card">
+        <h2>Especialidades</h2><div id="lEsp"></div>
+        <div class="item"><input id="nEsp" placeholder="Nueva especialidad"><button class="btn g sm" id="aEsp" type="button">Agregar</button></div>
+        <h2 style="margin-top:22px">Horario de atención</h2>
+        <div class="row">
+          <div><label for="ini">Desde</label><input id="ini" type="time"></div>
+          <div><label for="fin">Hasta</label><input id="fin" type="time"></div>
+        </div>
+        <label for="paso">Duración de cada cita (minutos)</label><input id="paso" type="number" min="10" max="120" step="5">
+      </div>
+      <div class="card">
+        <h2>Profesionales</h2><div id="lMed"></div>
+        <button class="btn g sm" id="aMed" type="button"><span class="ms">add</span>Agregar profesional</button>
+        <p class="meta" style="margin-top:18px">Los cambios se guardan solos en este navegador.</p>
+        <button class="btn d sm" id="reset" type="button">Restablecer valores iniciales</button>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="toast" role="status"></div>
+<script>
+const KC='arias_citas_v1',KG='arias_cfg_v1';
+const DEF={esp:['Medicina general','Pediatría','Ginecología','Cardiología','Laboratorio clínico'],
+ med:[{n:'Dr. Fernando Castillo',e:'Medicina general'},{n:'Profesional por asignar',e:'Pediatría'}],ini:'08:00',fin:'16:30',paso:30};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function ld(k,d){try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+let cfg=ld(KG,JSON.parse(JSON.stringify(DEF))),citas=ld(KC,[]),sel='',ver='';
+const saveC=()=>sv(KC,citas),saveG=()=>sv(KG,cfg);
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2200)}
+const h12=h=>{let[a,b]=h.split(':').map(Number);return (a%12||12)+':'+String(b).padStart(2,'0')+(a<12?' AM':' PM')};
+const fmtF=f=>{const[y,m,d]=f.split('-');return d+'/'+m+'/'+y};
+function horas(){const r=[],[a,b]=cfg.ini.split(':').map(Number),[c,d]=cfg.fin.split(':').map(Number),p=Math.max(5,+cfg.paso||30);
+ for(let t=a*60+b;t<=c*60+d;t+=p)r.push(String(t/60|0).padStart(2,'0')+':'+String(t%60).padStart(2,'0'));return r}
+const opts=(a,v)=>a.map(x=>`<option${x===v?' selected':''}>${esc(x)}</option>`).join('');
+
+function tab(n){['agenda','opciones'].forEach(i=>$('#'+i).hidden=i!==n);
+ document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',b.dataset.tab===n));if(n==='agenda')pintaForm()}
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>tab(b.dataset.tab));
+
+function pintaForm(){
+ const e=$('#esp').value||cfg.esp[0];$('#esp').innerHTML=opts(cfg.esp,e);
+ const ms=cfg.med.filter(m=>m.e===$('#esp').value).map(m=>m.n);
+ $('#med').innerHTML=ms.length?opts(ms,$('#med').value):'<option value="">Cualquier profesional</option>';
+ pintaSlots()}
+function pintaSlots(){
+ const f=$('#fecha').value,m=$('#med').value,e=$('#esp').value;
+ const tom=new Set(citas.filter(c=>c.fecha===f&&c.estado!=='cancelada'&&c.esp===e&&c.med===m).map(c=>c.hora));
+ if(tom.has(sel))sel='';
+ $('#slots').innerHTML=horas().map(h=>`<button type="button" class="slot" data-h="${h}" aria-pressed="${h===sel}"${tom.has(h)?' disabled':''}>${h12(h)}</button>`).join('')}
+$('#slots').onclick=e=>{const b=e.target.closest('.slot');if(!b||b.disabled)return;sel=b.dataset.h;pintaSlots()};
+$('#esp').onchange=pintaForm;$('#med').onchange=pintaSlots;$('#fecha').onchange=pintaSlots;
+$('#fecha').min=new Date().toISOString().slice(0,10);
+
+$('#f').onsubmit=e=>{e.preventDefault();
+ if(!sel){toast('Elige una hora disponible');return}
+ citas.push({id:Date.now(),pac:$('#pac').value.trim(),tel:$('#tel').value.trim(),fecha:$('#fecha').value,hora:sel,
+  esp:$('#esp').value,med:$('#med').value,mot:$('#mot').value.trim(),estado:'pendiente'});
+ saveC();sel='';$('#pac').value=$('#tel').value=$('#mot').value='';pintaSlots();pintaLista();toast('Cita agendada')};
+
+function pintaLista(){
+ let l=citas.slice().sort((a,b)=>(a.fecha+a.hora).localeCompare(b.fecha+b.hora));if(ver)l=l.filter(c=>c.fecha===ver);
+ $('#lista').innerHTML=l.length?l.map(c=>`<div class="cita"><div class="hora">${h12(c.hora)}<small>${fmtF(c.fecha)}</small></div>
+ <div><strong>${esc(c.pac)}</strong><span class="b ${c.estado}">${c.estado}</span>
+ <div class="meta">${esc(c.esp)}${c.med?' · '+esc(c.med):''} · ${esc(c.tel)}</div>${c.mot?`<div class="meta">${esc(c.mot)}</div>`:''}</div>
+ <div class="acts">${c.estado==='pendiente'?`<button class="btn g sm" data-a="ok" data-i="${c.id}">Confirmar</button>`:''}
+ ${c.estado!=='cancelada'?`<button class="btn l sm" data-a="no" data-i="${c.id}">Cancelar</button>`:''}
+ <button class="btn d sm" data-a="del" data-i="${c.id}" aria-label="Eliminar cita"><span class="ms" style="font-size:16px">delete</span></button></div></div>`).join('')
+ :'<div class="empty">No hay citas'+(ver?' para esa fecha':' todavía')+'. Agenda la primera desde el formulario.</div>'}
+$('#lista').onclick=e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i,c=citas.find(x=>x.id===i);
+ if(b.dataset.a==='ok')c.estado='confirmada';if(b.dataset.a==='no')c.estado='cancelada';
+ if(b.dataset.a==='del'){if(!confirm('¿Eliminar esta cita?'))return;citas=citas.filter(x=>x.id!==i)}
+ saveC();pintaLista();pintaSlots()};
+$('#ver').onchange=e=>{ver=e.target.value;pintaLista()};$('#todas').onclick=()=>{ver='';$('#ver').value='';pintaLista()};
+
+function pintaOpc(){
+ $('#lEsp').innerHTML=cfg.esp.map((x,i)=>`<div class="item"><input data-k="esp" data-i="${i}" value="${esc(x)}" aria-label="Especialidad"><button class="btn d sm" data-del="esp" data-i="${i}" aria-label="Quitar especialidad"><span class="ms" style="font-size:16px">delete</span></button></div>`).join('');
+ $('#lMed').innerHTML=cfg.med.map((m,i)=>`<div class="item"><input data-k="mn" data-i="${i}" value="${esc(m.n)}" aria-label="Nombre del profesional"><select data-k="me" data-i="${i}" aria-label="Especialidad del profesional">${opts(cfg.esp,m.e)}</select><button class="btn d sm" data-del="med" data-i="${i}" aria-label="Quitar profesional"><span class="ms" style="font-size:16px">delete</span></button></div>`).join('');
+ $('#ini').value=cfg.ini;$('#fin').value=cfg.fin;$('#paso').value=cfg.paso}
+$('#opciones').addEventListener('change',e=>{const t=e.target,i=+t.dataset.i;
+ if(t.dataset.k==='esp'){const v=t.value.trim();if(!v){pintaOpc();return}const old=cfg.esp[i];cfg.esp[i]=v;cfg.med.forEach(m=>{if(m.e===old)m.e=v});citas.forEach(c=>{if(c.esp===old)c.esp=v});saveC()}
+ if(t.dataset.k==='mn'){const old=cfg.med[i].n;cfg.med[i].n=t.value.trim()||old;citas.forEach(c=>{if(c.med===old)c.med=cfg.med[i].n});saveC()}
+ if(t.dataset.k==='me')cfg.med[i].e=t.value;
+ if(t.id==='ini')cfg.ini=t.value||cfg.ini;if(t.id==='fin')cfg.fin=t.value||cfg.fin;if(t.id==='paso')cfg.paso=Math.max(5,+t.value||30);
+ saveG();pintaOpc();toast('Cambios guardados')});
+$('#opciones').addEventListener('click',e=>{const b=e.target.closest('[data-del]');if(!b)return;const i=+b.dataset.i;
+ if(b.dataset.del==='esp'){if(cfg.esp.length<2){toast('Debe quedar al menos una especialidad');return}const x=cfg.esp[i];cfg.esp.splice(i,1);cfg.med=cfg.med.filter(m=>m.e!==x)}
+ else cfg.med.splice(i,1);saveG();pintaOpc()});
+$('#aEsp').onclick=()=>{const v=$('#nEsp').value.trim();if(!v||cfg.esp.includes(v))return;cfg.esp.push(v);$('#nEsp').value='';saveG();pintaOpc();toast('Especialidad agregada')};
+$('#aMed').onclick=()=>{cfg.med.push({n:'Nuevo profesional',e:cfg.esp[0]});saveG();pintaOpc()};
+$('#reset').onclick=()=>{if(!confirm('Se restablecerán especialidades, profesionales y horario. Las citas no se borran.'))return;cfg=JSON.parse(JSON.stringify(DEF));saveG();pintaOpc();toast('Valores restablecidos')};
+
+pintaForm();pintaLista();pintaOpc();
+</script></body></html>
